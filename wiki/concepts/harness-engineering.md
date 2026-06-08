@@ -44,3 +44,6 @@ Definição aceita por [[wiki/entities/martin-fowler]], OpenAI, LangChain, Anthr
 
 - [[wiki/concepts/tres-camadas-coding-ia]]
 - [[wiki/concepts/ambient-affordances]]
+- [[wiki/concepts/spec-driven-development]]
+- [[wiki/sources/harness-engineering-fowler]] — artigo fonte original
+- [[wiki/sources/maintainability-sensors]] — aplicação prática dos sensores

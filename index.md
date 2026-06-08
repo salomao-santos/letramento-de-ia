@@ -10,7 +10,8 @@ updated: 2026-06-08
 ## Entidades
 
 - [[wiki/entities/zarathon-viana]] — Autor da série "As 3 camadas do coding com IA" (ZaraTips/Substack)
-- [[wiki/entities/martin-fowler]] — Autor de Harness Engineering, referência em arquitetura de software
+- [[wiki/entities/birgitta-bockeler]] — Autora de Harness Engineering e Maintainability Sensors (Thoughtworks)
+- [[wiki/entities/martin-fowler]] — Chief Scientist da Thoughtworks, referência em arquitetura de software
 - [[wiki/entities/kent-beck]] — Criador do TDD, pratica augmented coding com agentes
 - [[wiki/entities/archunit]] — Ferramenta de testes de arquitetura para Java
 - [[wiki/entities/dependency-cruiser]] — Validador de dependências para JavaScript/TypeScript
@@ -19,6 +20,7 @@ updated: 2026-06-08
 - [[wiki/entities/github-copilot]] — Ferramenta de autocomplete e review da GitHub
 - [[wiki/entities/opencode]] — Agente de coding open-source, agnóstico de provider
 - [[wiki/entities/codex-openai]] — Agente de coding da OpenAI
+- [[wiki/entities/kiro-ide]] — IDE da AWS com workflow spec-driven (Requirements → Design → Tasks)
 
 ## Conceitos
 
@@ -32,6 +34,7 @@ updated: 2026-06-08
 - [[wiki/concepts/mutation-testing]] — Detector de mentira para suites de teste
 - [[wiki/concepts/property-based-testing]] — Testes por propriedades universais, anti-alucinação
 - [[wiki/concepts/code-review-como-portao]] — Review como último portão humano antes de produção
+- [[wiki/concepts/spec-driven-development]] — Spec como fonte da verdade para humano e IA
 
 ## Fontes
 
@@ -40,6 +43,9 @@ updated: 2026-06-08
 - [[wiki/sources/devs-sao-os-novos-pilotos]] — [2026-04-09] Paralelo aviação-dev e degradação de habilidades
 - [[wiki/sources/tdd-na-era-dos-agentes]] — [2026-05-14] TDD como contrato que o LLM não burla
 - [[wiki/sources/code-review-na-era-dos-agentes]] — [2026-04-09] Code review como portão final
+- [[wiki/sources/harness-engineering-fowler]] — [2026-04-01] Artigo fundacional sobre harness engineering (Böckeler/Fowler)
+- [[wiki/sources/maintainability-sensors]] — [2026-05-26] Walkthrough prático de sensores de manutenibilidade
+- [[wiki/sources/spec-driven-development]] — [2026-06-08] Análise crítica de SDD: Kiro, spec-kit e Tessl
 
 ## Sínteses
 

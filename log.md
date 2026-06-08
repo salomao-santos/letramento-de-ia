@@ -17,3 +17,21 @@ updated: 2026-06-08
   5. "Se teu code review é LGTM automático, o gargalo é tu, não o agente" (2026-04-09)
 - Páginas criadas: 5 sources, 10 concepts, 10 entities, 1 synthesis (overview)
 - Observações: Série extremamente coesa; todos os artigos convergem para a tese de que a engenharia de software clássica (camada 3) é onde o engenheiro se destaca na era da IA. Dados fortemente embasados (METR, DORA 2025, Fowler/Böckeler).
+
+## [2026-06-08] ingest | Harness Engineering for Coding Agent Users (Böckeler/Fowler)
+- Fonte: "Harness engineering for coding agent users" por Birgitta Böckeler, publicado em martinfowler.com (2026-04-01)
+- Páginas criadas: wiki/sources/harness-engineering-fowler, wiki/entities/birgitta-bockeler
+- Páginas atualizadas: wiki/concepts/harness-engineering, wiki/concepts/sensores-computacionais, index.md
+- Observações: Artigo fundacional que define a taxonomia completa (guides/sensors × computational/inferential). É a fonte primária citada por toda a série do Zarathon Viana.
+
+## [2026-06-08] ingest | Maintainability Sensors for Coding Agents (Böckeler)
+- Fonte: "Maintainability sensors for coding agents" por Birgitta Böckeler, publicado em martinfowler.com (2026-05-26)
+- Páginas criadas: wiki/sources/maintainability-sensors
+- Páginas atualizadas: wiki/entities/birgitta-bockeler, wiki/concepts/mutation-testing, wiki/entities/dependency-cruiser, index.md
+- Observações: Walkthrough prático com sensores reais em projeto TypeScript/NextJS. Confirma que mutation testing é crucial quando testagem é delegada à IA. Mostra que cross-file concerns precisam de sensor inferencial.
+
+## [2026-06-08] ingest | Understanding Spec-Driven-Development: Kiro, spec-kit, and Tessl (Böckeler)
+- Fonte: "Understanding Spec-Driven-Development: Kiro, spec-kit, and Tessl" por Birgitta Böckeler, publicado em martinfowler.com (2026)
+- Páginas criadas: wiki/sources/spec-driven-development, wiki/concepts/spec-driven-development, wiki/entities/kiro-ide
+- Páginas atualizadas: index.md
+- Observações: Análise crítica das 3 ferramentas SDD. Define 3 níveis (spec-first, spec-anchored, spec-as-source). Levanta preocupação com "Verschlimmbesserung" — piorar na tentativa de melhorar. Paralelo interessante com MDD do passado.
