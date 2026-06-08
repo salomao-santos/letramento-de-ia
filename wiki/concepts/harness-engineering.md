@@ -4,7 +4,7 @@ type: concept
 tags: [harness-engineering, agentes-ia, ferramentas]
 created: 2026-06-08
 updated: 2026-06-08
-sources: ["[[wiki/sources/as-3-camadas-do-coding-com-ia]]", "[[wiki/sources/arquitetura-na-era-dos-agentes]]"]
+sources: ["[[wiki/sources/as-3-camadas-do-coding-com-ia]]", "[[wiki/sources/arquitetura-na-era-dos-agentes]]", "[[wiki/sources/engenharia-era-piloto-automatico]]"]
 ---
 
 # Harness Engineering
@@ -34,6 +34,12 @@ Definição aceita por [[wiki/entities/martin-fowler]], OpenAI, LangChain, Anthr
 ## Distinção importante
 
 [[wiki/entities/zarathon-viana]] argumenta que Harness Engineering na acepção da literatura (camada 2) é importante mas insuficiente. A camada que mais pesa é a engenharia de software clássica ([[wiki/concepts/tres-camadas-coding-ia]]).
+
+## Harness como comunicação
+
+Zarathon expande o conceito: harness não é só tooling, é também **comunicação**. A habilidade de se expressar com clareza, sem ambiguidade e de forma token-efficient é parte do harness. Quem não declara intenção de forma direta e pragmática perde tempo em pingpong com a LLM e polui o contexto.
+
+> "Harness não é só tooling, harness também é comunicação."
 
 ## Categorias (Fowler/Böckeler)
 

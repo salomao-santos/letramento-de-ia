@@ -4,7 +4,7 @@ type: concept
 tags: [formação, prática, aviação, carreira]
 created: 2026-06-08
 updated: 2026-06-08
-sources: ["[[wiki/sources/devs-sao-os-novos-pilotos]]"]
+sources: ["[[wiki/sources/devs-sao-os-novos-pilotos]]", "[[wiki/sources/engenharia-era-piloto-automatico]]"]
 ---
 
 # Horas de Voo para Devs
@@ -43,7 +43,14 @@ O piloto moderno usa automação na maior parte do voo. Mas assume manual na dec
 
 > "Quando foi a última vez que você voei no manual?"
 
+## Formação da nova geração (Zarathon)
+
+A mesma lógica se aplica à formação: usar menos instrumentos no início para construir base sólida. Problem based learning + pair programming sênior-júnior como alternativa ao caminho tradicional que está sendo corroído.
+
+Ver: [[wiki/concepts/formacao-novos-engenheiros]]
+
 ## Ver também
 
 - [[wiki/concepts/automation-complacency]]
 - [[wiki/concepts/tres-camadas-coding-ia]]
+- [[wiki/concepts/formacao-novos-engenheiros]]

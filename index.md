@@ -35,6 +35,9 @@ updated: 2026-06-08
 - [[wiki/concepts/property-based-testing]] — Testes por propriedades universais, anti-alucinação
 - [[wiki/concepts/code-review-como-portao]] — Review como último portão humano antes de produção
 - [[wiki/concepts/spec-driven-development]] — Spec como fonte da verdade para humano e IA
+- [[wiki/concepts/sanity-checks]] — Cheque de sanidade automatizado antes de produção
+- [[wiki/concepts/multimodelo-slm]] — Futuro multimodelo e Specific Language Models
+- [[wiki/concepts/formacao-novos-engenheiros]] — Problem based learning + pair programming na era IA
 
 ## Fontes
 
@@ -46,6 +49,7 @@ updated: 2026-06-08
 - [[wiki/sources/harness-engineering-fowler]] — [2026-04-01] Artigo fundacional sobre harness engineering (Böckeler/Fowler)
 - [[wiki/sources/maintainability-sensors]] — [2026-05-26] Walkthrough prático de sensores de manutenibilidade
 - [[wiki/sources/spec-driven-development]] — [2026-06-08] Análise crítica de SDD: Kiro, spec-kit e Tessl
+- [[wiki/sources/engenharia-era-piloto-automatico]] — [2026-06-05] Podcast: DDD, multimodelo, formação, liderança na era IA
 
 ## Sínteses
 

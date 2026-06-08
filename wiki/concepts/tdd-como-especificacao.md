@@ -4,7 +4,7 @@ type: concept
 tags: [tdd, testes, especificação, coding-com-ia]
 created: 2026-06-08
 updated: 2026-06-08
-sources: ["[[wiki/sources/tdd-na-era-dos-agentes]]"]
+sources: ["[[wiki/sources/tdd-na-era-dos-agentes]]", "[[wiki/sources/engenharia-era-piloto-automatico]]"]
 ---
 
 # TDD como Especificação
@@ -45,8 +45,21 @@ Devs em projetos bem testados são mais lentos com IA (METR). Isso é **bom**: s
 - Usar agente para gerar PBT a partir de invariantes que VOCÊ define
 - Agente pode escrever testes de integração/e2e como complemento
 
+## TDD como Harness (Zarathon)
+
+Na visão expandida de [[wiki/entities/zarathon-viana]], TDD é literalmente um harness — um "cercado" que define os critérios aceitos:
+
+> "São esses critérios que eu aceito que você me ajude a criar dentro desse cercadinho."
+
+Implicações:
+- Codebase facilmente testável = facilmente alterável = saudável
+- Software de mais qualidade e previsibilidade como efeito colateral
+- Em brownfield (95% da indústria), primeiro estruturar camada de QA antes de usar IA
+- Mutation testing para identificar testes que ainda faltam
+
 ## Ver também
 
 - [[wiki/concepts/mutation-testing]]
 - [[wiki/concepts/property-based-testing]]
 - [[wiki/concepts/sensores-computacionais]]
+- [[wiki/concepts/sanity-checks]]

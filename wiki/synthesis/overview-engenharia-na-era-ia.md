@@ -4,12 +4,12 @@ type: synthesis
 tags: [síntese, overview, engenharia-de-software, agentes-ia, harness-engineering]
 created: 2026-06-08
 updated: 2026-06-08
-sources: ["[[wiki/sources/as-3-camadas-do-coding-com-ia]]", "[[wiki/sources/arquitetura-na-era-dos-agentes]]", "[[wiki/sources/devs-sao-os-novos-pilotos]]", "[[wiki/sources/tdd-na-era-dos-agentes]]", "[[wiki/sources/code-review-na-era-dos-agentes]]", "[[wiki/sources/harness-engineering-fowler]]", "[[wiki/sources/maintainability-sensors]]", "[[wiki/sources/spec-driven-development]]"]
+sources: ["[[wiki/sources/as-3-camadas-do-coding-com-ia]]", "[[wiki/sources/arquitetura-na-era-dos-agentes]]", "[[wiki/sources/devs-sao-os-novos-pilotos]]", "[[wiki/sources/tdd-na-era-dos-agentes]]", "[[wiki/sources/code-review-na-era-dos-agentes]]", "[[wiki/sources/harness-engineering-fowler]]", "[[wiki/sources/maintainability-sensors]]", "[[wiki/sources/spec-driven-development]]", "[[wiki/sources/engenharia-era-piloto-automatico]]"]
 ---
 
 # Engenharia de Software na Era dos Agentes de IA
 
-Síntese de 8 fontes processadas nesta wiki, conectando os argumentos de [[wiki/entities/zarathon-viana]] (série "As 3 camadas do coding com IA") com o trabalho de [[wiki/entities/birgitta-bockeler]] e [[wiki/entities/martin-fowler]] (Harness Engineering, Maintainability Sensors, Spec-Driven Development).
+Síntese de 9 fontes processadas nesta wiki, conectando os argumentos de [[wiki/entities/zarathon-viana]] (série "As 3 camadas do coding com IA") com o trabalho de [[wiki/entities/birgitta-bockeler]] e [[wiki/entities/martin-fowler]] (Harness Engineering, Maintainability Sensors, Spec-Driven Development).
 
 ---
 
@@ -126,6 +126,50 @@ O voo Air France 447 (2009) como metáfora: quando o autopilot falha, só quem t
 
 ---
 
+## Multimodelo e Sustentabilidade Econômica
+
+([[wiki/concepts/multimodelo-slm]], [[wiki/sources/engenharia-era-piloto-automatico]])
+
+Modelos atuais são subsidiados (custos devem subir ~10x). A resposta é diversificação:
+
+| Fase | Estratégia |
+|------|-----------|
+| Agora | LLMs subsidiados |
+| 1-2 anos | Híbrido: LLM caro (raciocínio) + open models (implementação) |
+| 5-10 anos | SLMs fine-tunados por domínio, rodando localmente (~200MB) |
+
+**Workflow prático:** Opus para design/thinking + Qwen/DeepSeek para implementação. Resultados comparáveis a 1/5 do custo.
+
+---
+
+## Formação de Novos Engenheiros
+
+([[wiki/concepts/formacao-novos-engenheiros]], [[wiki/sources/engenharia-era-piloto-automatico]])
+
+O caminho tradicional (tarefas simples → aprender com seniors) está sendo corroído pela IA. Propostas:
+
+1. **Problem based learning:** resolver primeiro sem IA, depois com IA
+2. **Pair programming sênior-júnior:** buddies por período longo, repetir 10-20x
+3. **Horas de voo manual obrigatórias:** deploy, monitoramento, debug na mão
+
+> "A IA catalisa o output. Quem tem base acelera resultado bom; quem não tem acelera resultado ruim."
+
+---
+
+## Sanity Checks e Qualidade Intencional
+
+([[wiki/concepts/sanity-checks]], [[wiki/sources/engenharia-era-piloto-automatico]])
+
+Evolução do Sonar: verificações automatizadas no CI que validam se mudanças mantêm o codebase sadio.
+
+- **Determinístico:** linters, type checkers, fitness functions
+- **Probabilístico:** multimodelos validando em consenso
+- **Pré-mortem:** gerar cenários de falha → criar testes → canário → validação proativa
+
+> "A gente nunca fez o software como deveria ter sido feito. Agora não tem mais essa desculpa."
+
+---
+
 ## Spec-Driven Development: Promessa e Limites
 
 ([[wiki/sources/spec-driven-development]], [[wiki/concepts/spec-driven-development]])
@@ -176,12 +220,15 @@ Pela primeira vez na história, o salto de abstração não é determinístico�
 | Stanford/ADP 2025 | Emprego de devs 22-25 anos caiu ~20% desde pico de 2022 |
 | Código Fonte TV 2025 | 95,5% dos devs brasileiros usam IA |
 | Anthropic 2024 | Margem bruta negativa de 94% (subsídio insustentável) |
+| Zarathon 2026 | Brownfield = ~95% da indústria; maioria não está "AI ready" |
+| Zarathon 2026 | Custo de modelos deve subir ~10x quando subsídios acabarem |
+| Zarathon 2026 | SLM fine-tunado de 200MB já entrega resultados comparáveis para tarefas específicas |
 
 ---
 
 ## O Checklist do Engenheiro (Consolidado)
 
-Unificando as recomendações práticas de todas as 8 fontes:
+Unificando as recomendações práticas de todas as 9 fontes:
 
 1. **Materialize fronteiras no código** — bounded contexts, pastas por domínio
 2. **Instale sensores de arquitetura no CI** — ArchUnit, dependency-cruiser, Danger
@@ -193,6 +240,11 @@ Unificando as recomendações práticas de todas as 8 fontes:
 8. **Conventional commits** — histórico legível para volume industrial
 9. **Rode tudo como teste (quebra build), não como lint (só avisa)**
 10. **Mantenha "horas de voo manual"** — não delegue tudo ao agente
+11. **Instrumentalize tudo com log/trace** — breadcrumbs para debug assistido (custo quase zero)
+12. **Sanity checks no CI** — cheque de sanidade antes de ir pro ar
+13. **ADRs como base de conhecimento** — cada decisão de design gera ADR consultável
+14. **Rotina de "caixa preta" semanal** — extrair lições das sessões de agente e melhorar regras
+15. **Diversifique modelos** — raciocínio em LLM caro, implementação em model open/barato
 
 ---
 
@@ -215,10 +267,10 @@ Unificando as recomendações práticas de todas as 8 fontes:
 > Como guiar e verificar se a aplicação se comporta corretamente do ponto de vista funcional? Böckeler chama de "o elefante na sala". Nenhuma solução robusta ainda.
 
 > [!question] Formação de novos devs
-> Se a IA elimina as tarefas simples que formavam juniors, quem será senior daqui a 5 anos? O caminho tradicional de formação está sendo corroído.
+> Se a IA elimina as tarefas simples que formavam juniors, quem será senior daqui a 5 anos? O caminho tradicional de formação está sendo corroído. Zarathon propõe: problem based learning + pair sênior-júnior + horas de voo manual. O loop de repertório será mais rápido, mas a base ainda precisa de tempo ([[wiki/concepts/formacao-novos-engenheiros]]).
 
 > [!question] Sustentabilidade econômica dos modelos
-> OpenAI e Anthropic operam com prejuízo bilionário. Quando o subsídio acabar, preços podem subir 2-5x. Times que travam workflow num único provider estão expostos.
+> OpenAI e Anthropic operam com prejuízo bilionário. Quando o subsídio acabar, preços podem subir ~10x. Resposta proposta: migrar para multimodelo/SLM, com modelos open para implementação e LLMs caros apenas para raciocínio profundo ([[wiki/concepts/multimodelo-slm]]).
 
 ---
 
@@ -231,3 +283,6 @@ Unificando as recomendações práticas de todas as 8 fontes:
 - [[wiki/concepts/code-review-como-portao]] — o portão humano
 - [[wiki/concepts/automation-complacency]] — o risco psicológico
 - [[wiki/concepts/spec-driven-development]] — spec como guia (com limites)
+- [[wiki/concepts/sanity-checks]] — cheque de sanidade antes de produção
+- [[wiki/concepts/multimodelo-slm]] — futuro multimodelo e SLMs
+- [[wiki/concepts/formacao-novos-engenheiros]] — formação na era IA
