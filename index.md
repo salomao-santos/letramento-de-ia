@@ -49,4 +49,4 @@ updated: 2026-06-08
 
 ## Sínteses
 
-(ainda não há sínteses)
+- [[wiki/synthesis/overview-engenharia-na-era-ia]] — Síntese completa: engenharia de software na era dos agentes de IA (8 fontes)
