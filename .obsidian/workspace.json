@@ -1,0 +1,221 @@
+{
+  "main": {
+    "id": "71b8cae3346273ee",
+    "type": "split",
+    "children": [
+      {
+        "id": "0da9e38cc8fd1227",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c10cab6e0ef0fbee",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Visualização em gráfico"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "bfa9ad6560c964fe",
+    "type": "split",
+    "children": [
+      {
+        "id": "9442fc147e71245c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1e379cc060b2dece",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de arquivos"
+            }
+          },
+          {
+            "id": "ee649a5561399fd4",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Procurar"
+            }
+          },
+          {
+            "id": "48a58b54253f2de9",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 398.5
+  },
+  "right": {
+    "id": "701374b55489738e",
+    "type": "split",
+    "children": [
+      {
+        "id": "ca44bad1b1ecb690",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c9fc8f68e37feec0",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "raw/clippings/Se teu code review é LGTM automático, o gargalo é tu, não o agente.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Links inversos para Se teu code review é LGTM automático, o gargalo é tu, não o agente"
+            }
+          },
+          {
+            "id": "743a8a474600c8c3",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "raw/clippings/Se teu code review é LGTM automático, o gargalo é tu, não o agente.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Links de saída para Se teu code review é LGTM automático, o gargalo é tu, não o agente"
+            }
+          },
+          {
+            "id": "27e588eadfa6d2cc",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Etiquetas"
+            }
+          },
+          {
+            "id": "026b8ac45dbdaf9f",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Todas as propriedades"
+            }
+          },
+          {
+            "id": "9aed4255ead5922f",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "raw/clippings/Se teu code review é LGTM automático, o gargalo é tu, não o agente.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Sumário de Se teu code review é LGTM automático, o gargalo é tu, não o agente"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir a troca rápida": false,
+      "graph:Abrir visualização em gráfico": false,
+      "canvas:Criar novo canvas": false,
+      "daily-notes:Abrir a nota de hoje": false,
+      "templates:Inserir modelo": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "bases:Criar nova base": false
+    }
+  },
+  "active": "c10cab6e0ef0fbee",
+  "lastOpenFiles": [
+    "raw/clippings/Maintainability sensors for coding agents.md",
+    "ptbr/02-pratica-com-github-copilot/snake-sem-skill/README.md",
+    "ptbr/01-pratica-com-kiro/snake-com-skill-detalhado/README.md",
+    "ptbr/02-pratica-com-github-copilot/snake-com-skill/README.md",
+    "ptbr/01-pratica-com-kiro/snake-sem-skill/README.md",
+    "ptbr/01-pratica-com-kiro/snake-com-skill/README.md",
+    "ptbr/imagens/rag-and-embedding.png",
+    "ptbr/02-pratica-com-github-copilot/snake-sem-skill",
+    "ptbr/02-pratica-com-github-copilot/snake-com-skill",
+    "ptbr/01-pratica-com-kiro/snake-sem-skill",
+    "ptbr/01-pratica-com-kiro/snake-com-skill-detalhado",
+    "ptbr/01-pratica-com-kiro/snake-com-skill",
+    "ptbr/imagens",
+    "ptbr/04-o-que-toda-ia-generativa-precisa.md",
+    "ptbr/03-fundamentos-ia-generativa.md",
+    "ptbr/02-pratica-com-github-copilot",
+    "ptbr/02-linha-do-tempo.md",
+    "ptbr/01-pratica-com-kiro",
+    "ptbr/01-introdução.md",
+    "ptbr/00-roteiro.md",
+    "ptbr",
+    "raw/clippings/Harness engineering for coding agent users 1.md",
+    "raw/clippings/Understanding Spec-Driven-Development Kiro, spec-kit, and Tessl 1.md",
+    "raw/clippings/Harness engineering for coding agent users.md",
+    "wiki/entities/codex-openai.md",
+    "wiki/entities/opencode.md",
+    "wiki/entities/github-copilot.md",
+    "wiki/entities/cursor.md",
+    "wiki/concepts/code-review-como-portao.md",
+    "wiki/entities/claude-code.md",
+    "wiki/concepts/property-based-testing.md",
+    "wiki/entities/dependency-cruiser.md",
+    "wiki/entities/archunit.md",
+    "wiki/concepts/mutation-testing.md",
+    "wiki/entities/kent-beck.md",
+    "wiki/concepts/tdd-como-especificacao.md"
+  ]
+}
