@@ -181,6 +181,14 @@
   },
   "active": "c10cab6e0ef0fbee",
   "lastOpenFiles": [
+    "log.md",
+    "wiki/synthesis/overview-engenharia-na-era-ia.md",
+    "wiki/concepts/spec-driven-development.md",
+    "wiki/entities/kiro-ide.md",
+    "wiki/entities/birgitta-bockeler.md",
+    "wiki/sources/spec-driven-development.md",
+    "wiki/sources/maintainability-sensors.md",
+    "wiki/sources/harness-engineering-fowler.md",
     "raw/clippings/Maintainability sensors for coding agents.md",
     "ptbr/02-pratica-com-github-copilot/snake-sem-skill/README.md",
     "ptbr/01-pratica-com-kiro/snake-com-skill-detalhado/README.md",
@@ -208,14 +216,6 @@
     "wiki/entities/codex-openai.md",
     "wiki/entities/opencode.md",
     "wiki/entities/github-copilot.md",
-    "wiki/entities/cursor.md",
-    "wiki/concepts/code-review-como-portao.md",
-    "wiki/entities/claude-code.md",
-    "wiki/concepts/property-based-testing.md",
-    "wiki/entities/dependency-cruiser.md",
-    "wiki/entities/archunit.md",
-    "wiki/concepts/mutation-testing.md",
-    "wiki/entities/kent-beck.md",
-    "wiki/concepts/tdd-como-especificacao.md"
+    "wiki/entities/cursor.md"
   ]
 }
