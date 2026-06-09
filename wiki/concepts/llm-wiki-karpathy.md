@@ -4,7 +4,7 @@ type: concept
 tags: [memoria, wiki, knowledge-management, karpathy, compilacao]
 created: 2026-06-09
 updated: 2026-06-09
-sources: ["[[wiki/sources/memoria-agentes-karpathy-agentmemory]]"]
+sources: ["[[wiki/sources/memoria-agentes-karpathy-agentmemory]]", "[[wiki/sources/software-fundamentals-matter-more-than-ever]]"]
 ---
 
 # LLM Wiki (Padrão Karpathy)
@@ -66,14 +66,26 @@ Wikis humanas morrem porque o trabalho de manutenção é tedioso. LLMs são bon
 - **Este vault:** segue exatamente o padrão (raw/ → wiki/ → .kiro/steering/)
 - **[[wiki/entities/agentmemory|agentmemory]]:** automatiza ingest/query/lint via MCP, adiciona consolidação em tiers e retrieval híbrida
 
+## Aplicação prática: Ubiquitous Language como micro-wiki
+
+[[wiki/entities/matt-pocock|Matt Pocock]] demonstra uma aplicação mínima do padrão: um arquivo markdown de **linguagem ubíqua** (termos do domínio com definições alinhadas) que funciona como wiki compartilhada entre humano e IA. A IA o consulta constantemente durante planejamento e implementação, resultando em:
+
+- Thinking traces menos verbosos
+- Implementação mais fiel ao plano
+- Comunicação humano-IA mais precisa
+
+Isso valida a tese central: conhecimento compilado em markdown (mesmo uma única página) já supera o padrão de "redescobrir a cada query".
+
 ## Relação com outros conceitos
 
 - Resolve o problema criado pela [[wiki/concepts/compaction-de-contexto|compaction de contexto]]
 - É a camada 3 do modelo de 4 camadas para [[wiki/concepts/memoria-longo-prazo-agentes|memória de longo prazo]]
 - Alinha com [[wiki/concepts/harness-engineering]]: a wiki é um "guide" que canaliza o agente
+- Ubiquitous language ([[wiki/sources/software-fundamentals-matter-more-than-ever]]) é uma implementação mínima do padrão
 
 ## Referências
 
 - Gist original: Karpathy, abril 2026
 - Artigo VentureBeat: "Karpathy shares LLM knowledge base architecture that bypasses RAG"
 - [[wiki/sources/memoria-agentes-karpathy-agentmemory]]
+- [[wiki/sources/software-fundamentals-matter-more-than-ever]]

@@ -3,8 +3,8 @@ title: "Harness Engineering"
 type: concept
 tags: [harness-engineering, agentes-ia, ferramentas]
 created: 2026-06-08
-updated: 2026-06-08
-sources: ["[[wiki/sources/as-3-camadas-do-coding-com-ia]]", "[[wiki/sources/arquitetura-na-era-dos-agentes]]", "[[wiki/sources/engenharia-era-piloto-automatico]]"]
+updated: 2026-06-09
+sources: ["[[wiki/sources/as-3-camadas-do-coding-com-ia]]", "[[wiki/sources/arquitetura-na-era-dos-agentes]]", "[[wiki/sources/engenharia-era-piloto-automatico]]", "[[wiki/sources/software-fundamentals-matter-more-than-ever]]"]
 ---
 
 # Harness Engineering
@@ -41,6 +41,15 @@ Zarathon expande o conceito: harness não é só tooling, é também **comunica�
 
 > "Harness não é só tooling, harness também é comunicação."
 
+## Design Concept e Ubiquitous Language como Guides (Matt Pocock)
+
+[[wiki/entities/matt-pocock|Matt Pocock]] operacionaliza o conceito de guides com duas práticas:
+
+1. **Design concept compartilhado:** interrogação exaustiva (skill "Grill Me") para alinhar visão antes de gerar código. É um guide de processo — canaliza a IA antes que ela escreva qualquer linha.
+2. **Ubiquitous language:** arquivo markdown com terminologia do domínio, usado consistentemente em código, planejamento e conversas. É um guide persistente — a IA consulta a cada interação.
+
+Ambos são feedforward puro: moldam o comportamento da IA antes da ação, exatamente como a taxonomia Böckeler/Fowler define "guides".
+
 ## Categorias (Fowler/Böckeler)
 
 - **Guides (feedforward):** instruções que canalizam o comportamento do agente antes da ação
@@ -53,3 +62,4 @@ Zarathon expande o conceito: harness não é só tooling, é também **comunica�
 - [[wiki/concepts/spec-driven-development]]
 - [[wiki/sources/harness-engineering-fowler]] — artigo fonte original
 - [[wiki/sources/maintainability-sensors]] — aplicação prática dos sensores
+- [[wiki/sources/software-fundamentals-matter-more-than-ever]] — skills como guides práticos

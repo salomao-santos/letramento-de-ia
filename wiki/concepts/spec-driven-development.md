@@ -3,8 +3,8 @@ title: "Spec-Driven Development"
 type: concept
 tags: [spec-driven-development, workflows, especificação]
 created: 2026-06-08
-updated: 2026-06-08
-sources: ["[[wiki/sources/spec-driven-development]]"]
+updated: 2026-06-09
+sources: ["[[wiki/sources/spec-driven-development]]", "[[wiki/sources/software-fundamentals-matter-more-than-ever]]"]
 ---
 
 # Spec-Driven Development (SDD)
@@ -43,6 +43,12 @@ Diferente de **memory bank** (contexto geral para todas as sessões):
 4. **Separação funcional/técnica:** difícil na prática
 5. **Paralelo com MDD:** risco de herdar desvantagens (inflexibilidade + não-determinismo)
 
+## Crítica prática (Matt Pocock)
+
+[[wiki/entities/matt-pocock|Matt Pocock]] testou o ciclo "spec → code → ignore code → edit spec → regenerate" e constatou degradação progressiva: a cada iteração, o código ficava pior. Conclusão: specs-to-code é "vibe coding por outro nome" quando não se investe no design do sistema.
+
+A entropia de software (Pragmatic Programmer) se aplica: sem investimento consciente no design a cada mudança, o sistema se degrada inevitavelmente. A spec sozinha não impede isso.
+
 ## Valor real
 
 O princípio de **spec-first** (pensar e estruturar antes de pedir ao agente) é valioso. As ferramentas e workflows elaborados ainda estão em maturação.
@@ -55,5 +61,6 @@ O princípio de **spec-first** (pensar e estruturar antes de pedir ao agente) é
 ## Ver também
 
 - [[wiki/sources/spec-driven-development]]
+- [[wiki/sources/software-fundamentals-matter-more-than-ever]]
 - [[wiki/concepts/harness-engineering]]
 - [[wiki/concepts/tdd-como-especificacao]]

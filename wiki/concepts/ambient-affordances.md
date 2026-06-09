@@ -1,10 +1,10 @@
 ---
 title: "Ambient Affordances"
 type: concept
-tags: [arquitetura, agentes-ia, estrutura-de-codigo]
+tags: [arquitetura, agentes-ia, estrutura-de-codigo, deep-modules]
 created: 2026-06-08
-updated: 2026-06-08
-sources: ["[[wiki/sources/arquitetura-na-era-dos-agentes]]"]
+updated: 2026-06-09
+sources: ["[[wiki/sources/arquitetura-na-era-dos-agentes]]", "[[wiki/sources/software-fundamentals-matter-more-than-ever]]"]
 ---
 
 # Ambient Affordances
@@ -37,6 +37,26 @@ Quando um time tem um template padronizado para novo serviço (estrutura de past
 
 Organização por domínio é infinitamente mais navegável para agentes. O contexto fica junto. A fronteira fica visível.
 
+## Deep Modules como Affordance (Matt Pocock / Ousterhout)
+
+[[wiki/entities/matt-pocock|Matt Pocock]] reforça que a estrutura de módulos é a affordance mais impactante para agentes de IA. Usando a taxonomia de John Ousterhout (*A Philosophy of Software Design*):
+
+- **Deep modules:** muita funcionalidade escondida por trás de uma interface simples. A IA navega facilmente, testa pela interface, e o humano pode tratar como gray box.
+- **Shallow modules:** pouca funcionalidade, interface complexa, muitos módulos pequenos interconectados. A IA se perde na navegação e não entende dependências.
+
+```
+Deep modules:                   Shallow modules:
+┌───────────────────┐           ┌──┐ ┌──┐ ┌──┐ ┌──┐ ┌──┐
+│  simple interface │           │  │ │  │ │  │ │  │ │  │
+│                   │           └──┘ └──┘ └──┘ └──┘ └──┘
+│  lots of hidden   │             ↕    ↕    ↕    ↕    ↕
+│  functionality    │           (muitas dependências cruzadas)
+│                   │
+└───────────────────┘
+```
+
+Implicação prática: reestruturar em deep modules é a ação de maior impacto para tornar um codebase "IA-friendly".
+
 ## Impacto
 
 Times greenfield podem embutir harnessability desde o dia 1. As escolhas de tecnologia e arquitetura determinam o quão governável o código vai ser.
@@ -45,4 +65,6 @@ Times greenfield podem embutir harnessability desde o dia 1. As escolhas de tecn
 
 - [[wiki/concepts/harness-engineering]]
 - [[wiki/concepts/sensores-computacionais]]
+- [[wiki/concepts/tdd-como-especificacao]] — deep modules facilitam TDD (testa-se na interface)
 - [[wiki/sources/arquitetura-na-era-dos-agentes]]
+- [[wiki/sources/software-fundamentals-matter-more-than-ever]]

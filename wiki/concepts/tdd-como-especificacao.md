@@ -3,8 +3,8 @@ title: "TDD como Especificação"
 type: concept
 tags: [tdd, testes, especificação, coding-com-ia]
 created: 2026-06-08
-updated: 2026-06-08
-sources: ["[[wiki/sources/tdd-na-era-dos-agentes]]", "[[wiki/sources/engenharia-era-piloto-automatico]]"]
+updated: 2026-06-09
+sources: ["[[wiki/sources/tdd-na-era-dos-agentes]]", "[[wiki/sources/engenharia-era-piloto-automatico]]", "[[wiki/sources/software-fundamentals-matter-more-than-ever]]"]
 ---
 
 # TDD como Especificação
@@ -45,6 +45,12 @@ Devs em projetos bem testados são mais lentos com IA (METR). Isso é **bom**: s
 - Usar agente para gerar PBT a partir de invariantes que VOCÊ define
 - Agente pode escrever testes de integração/e2e como complemento
 
+## TDD como limite de velocidade (Matt Pocock)
+
+[[wiki/entities/matt-pocock|Matt Pocock]] reformula: "a taxa de feedback é seu limite de velocidade" (conceito de *outrunning your headlights* do Pragmatic Programmer). A IA por padrão gera muito código antes de validar. TDD força small steps obrigatórios.
+
+Complemento: codebases com **deep modules** (interfaces simples, muita funcionalidade interna) são mais testáveis porque se testa na interface. Isso cria um ciclo virtuoso: deep modules → facilidade de teste → TDD funciona melhor → codebase melhora → IA produz melhor código.
+
 ## TDD como Harness (Zarathon)
 
 Na visão expandida de [[wiki/entities/zarathon-viana]], TDD é literalmente um harness — um "cercado" que define os critérios aceitos:
@@ -63,3 +69,5 @@ Implicações:
 - [[wiki/concepts/property-based-testing]]
 - [[wiki/concepts/sensores-computacionais]]
 - [[wiki/concepts/sanity-checks]]
+- [[wiki/concepts/ambient-affordances]] — deep modules como affordance que facilita TDD
+- [[wiki/sources/software-fundamentals-matter-more-than-ever]]
