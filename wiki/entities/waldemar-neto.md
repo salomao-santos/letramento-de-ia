@@ -4,7 +4,7 @@ type: entity
 tags: [pessoa, autor, engenharia-de-software, brasil, tech-leads-clube]
 created: 2026-06-09
 updated: 2026-06-09
-sources: ["[[wiki/sources/spec-driven-limite-harness-proximo-passo]]", "[[wiki/sources/spec-driven-guia-completo-waldemar]]", "[[wiki/sources/voltei-do-vale-do-silicio-dev-2026]]", "[[wiki/sources/clean-architecture-custando-caro-era-ia]]"]
+sources: ["[[wiki/sources/spec-driven-limite-harness-proximo-passo]]", "[[wiki/sources/spec-driven-guia-completo-waldemar]]", "[[wiki/sources/voltei-do-vale-do-silicio-dev-2026]]", "[[wiki/sources/clean-architecture-custando-caro-era-ia]]", "[[wiki/sources/fluxo-completo-dev-avancado-ia]]"]
 ---
 
 # Waldemar Neto
@@ -51,12 +51,22 @@ Série de vídeos sobre Spec-Driven Development, Harness Engineering e Product E
 - Taste: julgamento estético e de qualidade sem regra ou demanda explícita
 - 4 movimentos práticos: mentalidade de produto, reunião com PM, peça de harness, system design
 
+## Posições-chave (fluxo completo dev com IA)
+
+- Setup mínimo para IA no repo: rules (progressive disclosure) + skills (tática local) + MCPs (contexto remoto) + docs (padrões do projeto)
+- Regra 30%: manter janela de contexto ≤30% de 200K tokens para evitar alucinação
+- Modelo caro (Claude Sonnet) para planejar, modelo barato (Cursor Composer) para executar steps
+- Git worktrees como vetor de paralelização: 2-3 agentes simultâneos em branches independentes
+- Documentação incremental: cada plano que falha revela lacuna → atualizar docs até atingir "Nirvana"
+- Diferença MCP vs Skill vs Docs: remoto (API para LLMs) vs tática local (reutilizável) vs persistente no repo
+
 ## Publicações nesta wiki
 
 - [[wiki/sources/spec-driven-limite-harness-proximo-passo]]
 - [[wiki/sources/spec-driven-guia-completo-waldemar]]
 - [[wiki/sources/voltei-do-vale-do-silicio-dev-2026]]
 - [[wiki/sources/clean-architecture-custando-caro-era-ia]]
+- [[wiki/sources/fluxo-completo-dev-avancado-ia]]
 
 ## Links
 

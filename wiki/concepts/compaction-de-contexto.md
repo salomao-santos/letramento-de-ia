@@ -4,7 +4,7 @@ type: concept
 tags: [memoria, contexto, agentes, llm, compaction]
 created: 2026-06-09
 updated: 2026-06-09
-sources: ["[[wiki/sources/memoria-agentes-karpathy-agentmemory]]", "[[wiki/sources/full-walkthrough-workflow-ai-coding]]", "[[wiki/sources/spec-driven-guia-completo-waldemar]]"]
+sources: ["[[wiki/sources/memoria-agentes-karpathy-agentmemory]]", "[[wiki/sources/full-walkthrough-workflow-ai-coding]]", "[[wiki/sources/spec-driven-guia-completo-waldemar]]", "[[wiki/sources/fluxo-completo-dev-avancado-ia]]"]
 ---
 
 # Compaction de Contexto
@@ -58,6 +58,17 @@ Implicação: o workflow deve ser desenhado para sessões curtas e independentes
 - **Implement** em janela nova e limpa, referenciando apenas os markdowns
 
 Caso real: 90 arquivos modificados com janela de implementação em apenas 50K tokens. Recomendação explícita: ficar dentro de 200K tokens (mesmo com janelas de 1M disponíveis).
+
+### Regra 30% e delegação de plano
+
+[[wiki/sources/fluxo-completo-dev-avancado-ia]] refina a recomendação com métricas operacionais:
+
+- **Meta prática:** manter ≤30% da janela de 200K tokens ocupada
+- **44% = zona de perigo:** a partir dali, "ela vai começar a alucinar"
+- **Padrão de delegação:** modelo caro (Claude Sonnet) cria o plano → plano é enviado a novo agente com modelo barato (Cursor Composer) para execução pura
+- **Resultado:** cada etapa começa com contexto limpo, mesmo em funcionalidades grandes
+
+Isso confirma e operacionaliza o princípio "Clear > Compact" de Matt Pocock: em vez de compactar, abrir nova sessão.
 
 ## Implementações por agente
 

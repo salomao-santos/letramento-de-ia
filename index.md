@@ -69,6 +69,7 @@ updated: 2026-06-09
 - [[wiki/sources/spec-driven-guia-completo-waldemar]] — [2025-05-01] Guia prático de SDD: workflow RPI, subagents, otimização de contexto (Waldemar Neto)
 - [[wiki/sources/voltei-do-vale-do-silicio-dev-2026]] — [2025-06-09] Product Engineer: relatos do Vale do Silício, Cursor, Databricks, taste e 4 movimentos práticos (Waldemar Neto)
 - [[wiki/sources/clean-architecture-custando-caro-era-ia]] — [2025-06-26] Clean Architecture ritualística vs princípios: custo em tokens, Navigation Paradox, YAGNI escalado (Waldemar Neto)
+- [[wiki/sources/fluxo-completo-dev-avancado-ia]] — [2025-01-25] Fluxo completo de dev com IA: RPI prático, worktrees, paralelização, setup mínimo (Waldemar Neto)
 
 ## Sínteses
 

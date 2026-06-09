@@ -4,7 +4,7 @@ type: concept
 tags: [spec-driven-development, workflows, especificação]
 created: 2026-06-08
 updated: 2026-06-09
-sources: ["[[wiki/sources/spec-driven-development]]", "[[wiki/sources/software-fundamentals-matter-more-than-ever]]", "[[wiki/sources/full-walkthrough-workflow-ai-coding]]", "[[wiki/sources/spec-driven-limite-harness-proximo-passo]]", "[[wiki/sources/spec-driven-guia-completo-waldemar]]"]
+sources: ["[[wiki/sources/spec-driven-development]]", "[[wiki/sources/software-fundamentals-matter-more-than-ever]]", "[[wiki/sources/full-walkthrough-workflow-ai-coding]]", "[[wiki/sources/spec-driven-limite-harness-proximo-passo]]", "[[wiki/sources/spec-driven-guia-completo-waldemar]]", "[[wiki/sources/fluxo-completo-dev-avancado-ia]]"]
 ---
 
 # Spec-Driven Development (SDD)
@@ -82,6 +82,19 @@ Arquivo state que guarda decisões tomadas durante implementação. Permite:
 - Separar entrega em múltiplos PRs
 - Rastreabilidade de decisões do agente
 
+### Demonstração end-to-end (vídeo prático)
+
+[[wiki/sources/fluxo-completo-dev-avancado-ia]] é a demonstração prática do RPI num case real (integração Stripe em monorepo):
+
+1. Design doc no Confluence → IA avalia completude do MVP
+2. IA quebra em tasks granulares (não tasks micro) → cria no Jira via skill
+3. IA avalia paralelização (identifica dependências)
+4. Novo contexto → plano com modelo caro (Sonnet) → execução em agente separado com modelo barato (Composer)
+5. Worktrees do Git para paralelizar tasks independentes (2-3 agentes simultâneos)
+6. Revisão humana entre cada ciclo
+
+Meta operacional: **≤30% de 200K tokens** por janela. A 44%, "ela vai começar a alucinar".
+
 ### Regra de ouro
 
 > Manter janela de contexto ≤ 200K tokens. Quanto maior, mais alucinação. Separar research de implement em janelas diferentes.
@@ -112,6 +125,7 @@ Conclusão: spec-driven é **feed forward puro** — diz o que fazer, mas não v
 - [[wiki/sources/software-fundamentals-matter-more-than-ever]]
 - [[wiki/sources/spec-driven-limite-harness-proximo-passo]]
 - [[wiki/sources/spec-driven-guia-completo-waldemar]]
+- [[wiki/sources/fluxo-completo-dev-avancado-ia]]
 - [[wiki/concepts/harness-engineering]]
 - [[wiki/concepts/tdd-como-especificacao]]
 - [[wiki/concepts/compaction-de-contexto]]

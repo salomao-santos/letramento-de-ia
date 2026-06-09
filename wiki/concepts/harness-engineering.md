@@ -4,7 +4,7 @@ type: concept
 tags: [harness-engineering, agentes-ia, ferramentas]
 created: 2026-06-08
 updated: 2026-06-09
-sources: ["[[wiki/sources/as-3-camadas-do-coding-com-ia]]", "[[wiki/sources/arquitetura-na-era-dos-agentes]]", "[[wiki/sources/engenharia-era-piloto-automatico]]", "[[wiki/sources/software-fundamentals-matter-more-than-ever]]", "[[wiki/sources/harness-beyond-skills-sensors]]", "[[wiki/sources/spec-driven-limite-harness-proximo-passo]]", "[[wiki/sources/voltei-do-vale-do-silicio-dev-2026]]"]
+sources: ["[[wiki/sources/as-3-camadas-do-coding-com-ia]]", "[[wiki/sources/arquitetura-na-era-dos-agentes]]", "[[wiki/sources/engenharia-era-piloto-automatico]]", "[[wiki/sources/software-fundamentals-matter-more-than-ever]]", "[[wiki/sources/harness-beyond-skills-sensors]]", "[[wiki/sources/spec-driven-limite-harness-proximo-passo]]", "[[wiki/sources/voltei-do-vale-do-silicio-dev-2026]]", "[[wiki/sources/fluxo-completo-dev-avancado-ia]]"]
 ---
 
 # Harness Engineering
@@ -31,6 +31,21 @@ Definição aceita por [[wiki/entities/martin-fowler]], OpenAI, LangChain, Anthr
 - Hooks
 - Skills
 - Sensores computacionais
+
+### Outer Harness operacionalizado (Waldemar — demo completa)
+
+[[wiki/sources/fluxo-completo-dev-avancado-ia]] detalha a implementação prática do outer harness num monorepo real:
+
+| Camada | Papel | Exemplo |
+|--------|-------|---------|
+| Rules | Estrutura base + progressive disclosure | "Se envolve módulos → leia X" |
+| Docs | Padrões específicos do projeto | architecture overview, coding patterns, migrations |
+| Skills | Tática local reutilizável | Skill Confluence, Skill Jira |
+| MCPs | Contexto remoto (API para LLMs) | Atlassian MCP, Context7 |
+
+**Diferença-chave:** MCP busca conhecimento que está **em outro lugar** (Confluence, Jira). Skill é instrução **local** de como usar esse conhecimento. Docs são referência **persistente** do projeto.
+
+**Investimento incremental:** "Cada vez que gero um plano que falta algo, melhoro a documentação até atingir o Nirvana." Levou dias para criar o contexto; o retorno é uma feature de 7 dias em 1 hora.
 
 ### Clarificação terminológica (Böckeler & Ford)
 

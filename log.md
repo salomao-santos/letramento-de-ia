@@ -7,6 +7,12 @@ updated: 2026-06-09
 
 # Log de Operações
 
+## [2026-06-09] ingest | Meu fluxo COMPLETO de desenvolvimento avançado com IA (Waldemar Neto)
+- Fonte: "Meu fluxo COMPLETO de desenvolvimento avançado com IA" por Waldemar Neto (Tech Leads Clube), YouTube (2025-01-25), ~22min
+- Páginas criadas: wiki/sources/fluxo-completo-dev-avancado-ia
+- Páginas atualizadas: wiki/entities/waldemar-neto (novas posições-chave, nova fonte), wiki/concepts/harness-engineering (outer harness operacionalizado com tabela rules/docs/skills/MCPs), wiki/concepts/compaction-de-contexto (regra 30%, delegação de plano), wiki/concepts/spec-driven-development (demonstração end-to-end do RPI, cross-ref), index.md
+- Observações: Vídeo prático demonstrando RPI end-to-end com integração Stripe em monorepo. Contribuições novas: regra 30% da janela de contexto como meta operacional, padrão de delegação modelo caro→barato para plan→implement, Git worktrees como vetor de paralelização (2-3 agentes simultâneos), diferença clara MCP vs Skill vs Docs, documentação incremental como investimento até "Nirvana". Complementa diretamente o guia teórico anterior (spec-driven-guia-completo-waldemar).
+
 ## [2026-06-09] ingest | Clean Architecture está te CUSTANDO CARO na era da IA (Waldemar Neto)
 - Fonte: "Clean Architecture está te CUSTANDO CARO na era da IA" por Waldemar Neto (Tech Leads Clube), YouTube (2025-06-26), ~16min
 - Páginas criadas: wiki/sources/clean-architecture-custando-caro-era-ia, wiki/concepts/custo-abstracoes-era-ia
