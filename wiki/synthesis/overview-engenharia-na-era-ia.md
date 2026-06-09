@@ -75,10 +75,10 @@ Fórmula canônica: **Agent = Model + Harness**
 
 ### Taxonomia
 
-|  | Feedforward (Guides) | Feedback (Sensors) |
-|--|---------------------|-------------------|
-| **Computational** | Scripts, codemods, LSPs | Testes, linters, type checkers, ArchUnit |
-| **Inferential** | AGENTS.md, Skills, specs | Review agents, "LLM as judge" |
+|                   | Feedforward (Guides)     | Feedback (Sensors)                       |
+| ----------------- | ------------------------ | ---------------------------------------- |
+| **Computational** | Scripts, codemods, LSPs  | Testes, linters, type checkers, ArchUnit |
+| **Inferential**   | AGENTS.md, Skills, specs | Review agents, "LLM as judge"            |
 
 ### Categorias de regulação
 1. **Maintainability** — qualidade interna (mais fácil de implementar hoje)
@@ -96,11 +96,11 @@ Sempre que um problema ocorre múltiplas vezes, melhorar os controles para torn�
 
 Böckeler experimentou em projeto real (TypeScript/NextJS) e documentou:
 
-| Quando | Sensores |
-|--------|----------|
+| Quando         | Sensores                                                                                          |
+| -------------- | ------------------------------------------------------------------------------------------------- |
 | Durante coding | Type checker, ESLint, Semgrep, dependency-cruiser, testes, mutation testing incremental, GitLeaks |
-| Pipeline (CI) | Todos os acima repetidos em ambiente limpo |
-| Periodicamente | Security review (IA), data handling review (IA), dependency freshness, modularity review |
+| Pipeline (CI)  | Todos os acima repetidos em ambiente limpo                                                        |
+| Periodicamente | Security review (IA), data handling review (IA), dependency freshness, modularity review          |
 
 ### Aprendizados-chave
 - Custom lint messages = "positive prompt injection" (fazem diferença real no comportamento do agente)

@@ -15,13 +15,13 @@ Analogia com a aviação onde horas de voo são requisito regulatório (ANAC: 15
 
 ## Como acumular "horas de voo"
 
-| Atividade | Analogia na aviação | Valor |
-|-----------|-------------------|-------|
-| Micro-SaaS / projetos próprios | Voo solo | Exposição total, sem instrutor |
-| Contribuição open source | Co-pilotagem com capitão experiente | Vê decisões em contexto real |
-| Freelance | Voos curtos, risco real | Consequência real, escopo controlado |
-| Build in public | Voo com rádio aberto | Feedback externo contínuo |
-| Hackathons com produto real | Simulação de emergência | Pressão, tempo, imprevistos |
+| Atividade                      | Analogia na aviação                 | Valor                                |
+| ------------------------------ | ----------------------------------- | ------------------------------------ |
+| Micro-SaaS / projetos próprios | Voo solo                            | Exposição total, sem instrutor       |
+| Contribuição open source       | Co-pilotagem com capitão experiente | Vê decisões em contexto real         |
+| Freelance                      | Voos curtos, risco real             | Consequência real, escopo controlado |
+| Build in public                | Voo com rádio aberto                | Feedback externo contínuo            |
+| Hackathons com produto real    | Simulação de emergência             | Pressão, tempo, imprevistos          |
 
 ## Quando voar manual é obrigatório
 

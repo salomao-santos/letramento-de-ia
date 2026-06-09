@@ -3,8 +3,8 @@ title: "Claude Code"
 type: entity
 tags: [ferramenta, agente-coding, anthropic, terminal]
 created: 2026-06-08
-updated: 2026-06-08
-sources: ["[[wiki/sources/as-3-camadas-do-coding-com-ia]]"]
+updated: 2026-06-09
+sources: ["[[wiki/sources/as-3-camadas-do-coding-com-ia]]", "[[wiki/sources/memoria-agentes-karpathy-agentmemory]]"]
 ---
 
 # Claude Code
@@ -32,8 +32,22 @@ Citado em todos os artigos como exemplo principal de agente de coding. Casos:
 - Superpowers (Jesse Vincent): plugin TDD ortodoxo, 650k+ installs
 - Matt Pocock Skills: skill `tdd` trending #1 GitHub
 
+## Compaction de Contexto (3 níveis)
+
+Análise do código-fonte ([[wiki/sources/memoria-agentes-karpathy-agentmemory|Akita, 2026]]) revela a implementação mais sofisticada de [[wiki/concepts/compaction-de-contexto|compaction]] entre os agentes:
+
+1. **Microcompact** (temporal): limpa resultados de tools antigos após gap de 60min (sincronizado com TTL de cache)
+2. **Autocompact**: summarization com 9 seções fixas — preserva todas as mensagens do usuário verbatim (seção 6)
+3. **SessionMemoryCompact** (experimental): cruza com memória persistente entre sessões
+
+Circuit breaker: para após 3 falhas consecutivas (evita ~250K API calls/dia desperdiçados).
+
+Design philosophy: **preservar narrativa do usuário** + otimizar custo de cache.
+
 ## Ver também
 
 - [[wiki/entities/cursor]]
 - [[wiki/entities/opencode]]
 - [[wiki/concepts/harness-engineering]]
+- [[wiki/concepts/compaction-de-contexto]]
+- [[wiki/concepts/memoria-longo-prazo-agentes]]
