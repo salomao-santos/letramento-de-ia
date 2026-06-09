@@ -1,4 +1,4 @@
 /blog/node_modules
 .DS_Store
 .vscode/
-.DS_Store
+.DS_Store.github/workflows/
