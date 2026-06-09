@@ -13,12 +13,19 @@ Use este template como base para pedir transcrições de vídeos YouTube organiz
 ### Prompt
 
 ```
-Use o MCP de transcrição do YouTube para obter a transcrição com timestamps do vídeo:
+Passo 1 — Obtenha as informações do vídeo:
+Use o MCP do YouTube (get_video_info) para buscar os metadados do vídeo:
 [URL_DO_VIDEO]
+
+Apresente para mim: título, canal/autor, descrição e idiomas de transcrição disponíveis.
+Aguarde minha confirmação antes de prosseguir.
+
+Passo 2 — Gere a transcrição:
+Após confirmação, use get_timed_transcript para obter a transcrição com timestamps.
 
 Crie um arquivo em raw/clippings/ com o seguinte formato:
 
-1. Front-matter YAML com: title, author, source (URL), type: transcript, date, language
+1. Front-matter YAML com: title, author (canal/autor do vídeo), source (URL), type: transcript, date, language
 2. Título H1 com nome da palestra/vídeo e autor
 3. Conteúdo dividido por minuto (## Minuto 0, ## Minuto 1, etc.)
 4. Cada segmento com timestamps simplificados [MM:SS]
