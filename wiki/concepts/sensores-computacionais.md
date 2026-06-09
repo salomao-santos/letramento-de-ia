@@ -3,8 +3,8 @@ title: "Sensores Computacionais"
 type: concept
 tags: [determinismo, ci-cd, linter, testes, arquitetura]
 created: 2026-06-08
-updated: 2026-06-08
-sources: ["[[wiki/sources/as-3-camadas-do-coding-com-ia]]", "[[wiki/sources/arquitetura-na-era-dos-agentes]]", "[[wiki/sources/tdd-na-era-dos-agentes]]"]
+updated: 2026-06-09
+sources: ["[[wiki/sources/as-3-camadas-do-coding-com-ia]]", "[[wiki/sources/arquitetura-na-era-dos-agentes]]", "[[wiki/sources/tdd-na-era-dos-agentes]]", "[[wiki/sources/harness-beyond-skills-sensors]]"]
 ---
 
 # Sensores Computacionais
@@ -47,7 +47,34 @@ Fowler chama o feedback do sensor ao agente de "positive prompt injection" — i
 
 > Rode como **teste** (quebra o build), não como **lint** (só avisa). Na era dos agentes, aviso não basta. Tem que travar.
 
+## Distribuição temporal (Böckeler)
+
+| Momento | Sensores | Propósito |
+|---------|----------|-----------|
+| **Durante coding session** | Type checker, ESLint, Semgrep, dependency-cruiser, testes, GitLeaks | Feedback imediato para self-correction |
+| **Pipeline CI** | Todos os acima, repetidos em ambiente limpo | Gate determinístico |
+| **Drift detection (periódico)** | Security review, dependency freshness, modularity review | Detectar degradação composta |
+
+## Sensor sidecar
+
+Conceito emergente: ferramenta que roda sensores **em paralelo** ao agente, com duas views:
+- **View humana:** dashboard visual (verde/vermelho) para situational awareness
+- **View agente:** apenas falhas + mensagens customizadas de correção ("positive prompt injection")
+
+O agente pode auto-corrigir antes que o humano sequer olhe o código. Isso reduz a carga de review.
+
+## Agente como mantenedor dos sensores
+
+Insight de [[wiki/sources/harness-beyond-skills-sensors]]: o agente pode **ajustar thresholds** de forma controlada. Exemplo: aumentar `max-lines` de 500 → 550 para um arquivo específico, com justificativa documentada no código. Não suprime globalmente — se o arquivo crescer de novo, o sensor re-dispara.
+
+## Balanceamento guides vs sensors
+
+Questão em aberto: se sensores cobrem 40% dos casos que um guide tentava prevenir, o guide pode ser deletado? Sensores são verificáveis; guides são "begging" probabilístico. Mas excesso de sensores pode levar o agente a over-engineer soluções para satisfazê-los.
+
 ## Ver também
 
 - [[wiki/concepts/tres-camadas-coding-ia]]
 - [[wiki/concepts/harness-engineering]]
+- [[wiki/concepts/mutation-testing]]
+- [[wiki/sources/harness-beyond-skills-sensors]]
+- [[wiki/sources/maintainability-sensors]]

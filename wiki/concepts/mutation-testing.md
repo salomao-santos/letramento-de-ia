@@ -1,10 +1,10 @@
 ---
-title: "Mutation Testing"
+title: "Mutation Testing (Teste de Mutação)"
 type: concept
 tags: [testes, qualidade, mutation-testing]
 created: 2026-06-08
-updated: 2026-06-08
-sources: ["[[wiki/sources/tdd-na-era-dos-agentes]]"]
+updated: 2026-06-09
+sources: ["[[wiki/sources/tdd-na-era-dos-agentes]]", "[[wiki/sources/harness-beyond-skills-sensors]]"]
 ---
 
 # Mutation Testing (Teste de Mutação)
@@ -40,8 +40,22 @@ Técnica que introduz pequenas mutações no código (troca `>` por `>=`, `+` po
 - Em fluxos de negócio críticos
 - Como gate no CI para módulos sensíveis
 
+## Limitação prática: custo computacional
+
+Böckeler confirma em [[wiki/sources/harness-beyond-skills-sensors]]: mutation testing é **resource intensive** (muda código → roda testes → repete). Não cabe como sensor contínuo em tempo real. Soluções:
+
+- **Modo incremental** (Stryker): testa apenas mutantes em código alterado
+- **Runs manuais periódicos** (drift detection)
+- **Resultados em JSON** → script customizado para queries + IA analisa hotspots
+
+## Caso real: coverage alta ≠ proteção
+
+Arquivo com 100% statement coverage e 75% branch coverage → 13 mutantes sobreviventes. Causa: cobertura vinha de acceptance test que chamava o módulo mas **não assertava valores internos**. Mutation testing revelou o gap que coverage escondeu.
+
 ## Ver também
 
 - [[wiki/concepts/tdd-como-especificacao]]
 - [[wiki/concepts/property-based-testing]]
 - [[wiki/concepts/sensores-computacionais]]
+- [[wiki/sources/harness-beyond-skills-sensors]]
+- [[wiki/sources/maintainability-sensors]]

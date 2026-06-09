@@ -4,7 +4,7 @@ type: concept
 tags: [harness-engineering, agentes-ia, ferramentas]
 created: 2026-06-08
 updated: 2026-06-09
-sources: ["[[wiki/sources/as-3-camadas-do-coding-com-ia]]", "[[wiki/sources/arquitetura-na-era-dos-agentes]]", "[[wiki/sources/engenharia-era-piloto-automatico]]", "[[wiki/sources/software-fundamentals-matter-more-than-ever]]"]
+sources: ["[[wiki/sources/as-3-camadas-do-coding-com-ia]]", "[[wiki/sources/arquitetura-na-era-dos-agentes]]", "[[wiki/sources/engenharia-era-piloto-automatico]]", "[[wiki/sources/software-fundamentals-matter-more-than-ever]]", "[[wiki/sources/harness-beyond-skills-sensors]]"]
 ---
 
 # Harness Engineering
@@ -19,17 +19,27 @@ Definição aceita por [[wiki/entities/martin-fowler]], OpenAI, LangChain, Anthr
 
 ## Componentes do Harness
 
-### Internos (vêm com a ferramenta)
+### Inner Harness (vem com a ferramenta)
 - System prompt
 - Mecanismo de retrieval
 - Orquestração de tools
 
-### Externos (você constrói por cima)
+### Outer Harness (você constrói por cima)
 - Contexto persistente: CLAUDE.md, AGENTS.md, .cursorrules
 - Tools e MCPs
 - Sub-agents
 - Hooks
 - Skills
+- Sensores computacionais
+
+### Clarificação terminológica (Böckeler & Ford)
+
+[[wiki/sources/harness-beyond-skills-sensors]]: o termo "harness" é usado em **dois bounded contexts** na literatura:
+
+1. **Inner harness:** Claude Code/Cursor/Replit harnesseiam o **modelo** (Sonnet, Opus)
+2. **Outer harness:** o programador harnesseia o **agente** (Claude Code, Cursor)
+
+Chris Ford: "You can't put the harness on the inside of a dog." Ao ler sobre harness engineering, sempre checar qual é o referente.
 
 ## Distinção importante
 
@@ -55,11 +65,21 @@ Ambos são feedforward puro: moldam o comportamento da IA antes da ação, exata
 - **Guides (feedforward):** instruções que canalizam o comportamento do agente antes da ação
 - **Sensors (feedback):** verificações que detectam problemas depois da ação ([[wiki/concepts/sensores-computacionais]])
 
+## Investimento contínuo no Harness
+
+Insight do time OpenAI (Ryan LeCompte) e reforçado por Böckeler: equipes produtivas gastam a maior parte da energia **no harness**, não no código. Quase nunca tocam o código diretamente. Cada falha recorrente vira um novo sensor ou guide.
+
+> O que distingue uso produtivo de vibe coding com entropia crescente é o reinvestimento contínuo no harness.
+
+Paralelo com Kent Beck (via [[wiki/entities/matt-pocock]]): "Invest in the design of the system every day."
+
 ## Ver também
 
 - [[wiki/concepts/tres-camadas-coding-ia]]
 - [[wiki/concepts/ambient-affordances]]
 - [[wiki/concepts/spec-driven-development]]
+- [[wiki/concepts/sensores-computacionais]]
 - [[wiki/sources/harness-engineering-fowler]] — artigo fonte original
 - [[wiki/sources/maintainability-sensors]] — aplicação prática dos sensores
+- [[wiki/sources/harness-beyond-skills-sensors]] — deep dive em sensores com experimento
 - [[wiki/sources/software-fundamentals-matter-more-than-ever]] — skills como guides práticos

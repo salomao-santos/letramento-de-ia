@@ -111,6 +111,7 @@ Testes end-to-end/acceptance ficando populares (IA gera bem). Mutation testing a
 ## Referências
 
 - Artigo original: https://martinfowler.com/articles/sensors-for-coding-agents.html
+- Vídeo complementar: [[wiki/sources/harness-beyond-skills-sensors]]
 - dependency-cruiser: https://github.com/sverweij/dependency-cruiser
 - Stryker Mutator: https://stryker-mutator.io/
 - Vlad Khononov Modularity Skills: https://github.com/vladikk/modularity
