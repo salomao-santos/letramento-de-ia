@@ -3,8 +3,8 @@ title: "Formação de Novos Engenheiros na Era IA"
 type: concept
 tags: [formação, carreira, educação, pair-programming, problem-based-learning]
 created: 2026-06-08
-updated: 2026-06-08
-sources: ["[[wiki/sources/engenharia-era-piloto-automatico]]", "[[wiki/sources/devs-sao-os-novos-pilotos]]"]
+updated: 2026-06-09
+sources: ["[[wiki/sources/engenharia-era-piloto-automatico]]", "[[wiki/sources/devs-sao-os-novos-pilotos]]", "[[wiki/sources/boardroom-mercado-tecnologia-mudou]]"]
 ---
 
 # Formação de Novos Engenheiros na Era IA
@@ -71,3 +71,4 @@ O mercado exige aprender rápido, mas a base precisa de tempo para solidificar. 
 - [[wiki/concepts/automation-complacency]]
 - [[wiki/sources/engenharia-era-piloto-automatico]]
 - [[wiki/sources/devs-sao-os-novos-pilotos]]
+- [[wiki/sources/boardroom-mercado-tecnologia-mudou]] — pilares DDD + Software Design + System Thinking; certificações obsoletas

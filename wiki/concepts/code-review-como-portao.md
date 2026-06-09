@@ -3,8 +3,8 @@ title: "Code Review como Portão"
 type: concept
 tags: [code-review, qualidade, processo]
 created: 2026-06-08
-updated: 2026-06-08
-sources: ["[[wiki/sources/code-review-na-era-dos-agentes]]"]
+updated: 2026-06-09
+sources: ["[[wiki/sources/code-review-na-era-dos-agentes]]", "[[wiki/sources/boardroom-mercado-tecnologia-mudou]]"]
 ---
 
 # Code Review como Portão
@@ -62,3 +62,4 @@ CI (gates duros) → IA review (sensor) → Autor corrige → Humano revisa (jui
 - [[wiki/concepts/tres-camadas-coding-ia]]
 - [[wiki/concepts/automation-complacency]]
 - [[wiki/concepts/sensores-computacionais]]
+- [[wiki/sources/boardroom-mercado-tecnologia-mudou]] — "talvez a fase mais importante dentro do processo"

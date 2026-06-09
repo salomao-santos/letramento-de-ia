@@ -3,8 +3,8 @@ title: "Multimodelo e SLMs"
 type: concept
 tags: [modelos, custo, slm, infraestrutura, futuro]
 created: 2026-06-08
-updated: 2026-06-08
-sources: ["[[wiki/sources/engenharia-era-piloto-automatico]]"]
+updated: 2026-06-09
+sources: ["[[wiki/sources/engenharia-era-piloto-automatico]]", "[[wiki/sources/boardroom-mercado-tecnologia-mudou]]"]
 ---
 
 # Multimodelo e SLMs (Specific Language Models)
@@ -56,3 +56,4 @@ Zarathon testou fine-tune de Qwen 2.5 para código Go:
 
 - [[wiki/concepts/tres-camadas-coding-ia]] — Camada 1 (Modelo) é onde essa escolha acontece
 - [[wiki/sources/engenharia-era-piloto-automatico]]
+- [[wiki/sources/boardroom-mercado-tecnologia-mudou]] — multimodelo para EVAL; não pode usar mesmo modelo julgando a si mesmo ("ecos")

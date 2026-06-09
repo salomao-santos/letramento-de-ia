@@ -3,8 +3,8 @@ title: "Zarathon 'Zara' Viana"
 type: entity
 tags: [pessoa, autor, engenharia-de-software, brasil]
 created: 2026-06-08
-updated: 2026-06-08
-sources: ["[[wiki/sources/as-3-camadas-do-coding-com-ia]]", "[[wiki/sources/arquitetura-na-era-dos-agentes]]", "[[wiki/sources/devs-sao-os-novos-pilotos]]", "[[wiki/sources/tdd-na-era-dos-agentes]]", "[[wiki/sources/code-review-na-era-dos-agentes]]", "[[wiki/sources/engenharia-era-piloto-automatico]]"]
+updated: 2026-06-09
+sources: ["[[wiki/sources/as-3-camadas-do-coding-com-ia]]", "[[wiki/sources/arquitetura-na-era-dos-agentes]]", "[[wiki/sources/devs-sao-os-novos-pilotos]]", "[[wiki/sources/tdd-na-era-dos-agentes]]", "[[wiki/sources/code-review-na-era-dos-agentes]]", "[[wiki/sources/engenharia-era-piloto-automatico]]", "[[wiki/sources/boardroom-mercado-tecnologia-mudou]]"]
 ---
 
 # Zarathon "Zara" Viana
@@ -22,13 +22,17 @@ Série "As 3 camadas do coding com IA" — framework que organiza o pensamento s
 
 ## Posições-chave
 
-- DDD e Software Design como as duas skills mais importantes para engenheiros na era IA
+- DDD, Software Design e System Thinking como os 3 pilares para o futuro
 - Futuro multimodelo/SLM (Specific Language Models) fine-tunados por domínio
-- TDD como harness (cercado) e não apenas verificação
+- TDD como harness (cercado) e não apenas verificação — "TDD agora virou realidade"
 - Harness é tooling + comunicação (token efficiency)
 - "Caixa preta" semanal: rotina de extrair lições das sessões de agente e melhorar regras
 - Pré-mortem como prática de qualidade intencional
 - O líder do futuro é mais técnico, usa IA para dialogar com negócio
+- EM + PM convergindo em "manager de tecnologia"
+- Build to Learn vs Build to Earn como dois modos coexistentes
+- Onboarding quase 10x com IA (ler código legado em 1 semana)
+- Viés da eloquência: LLMs geram confiança excessiva por serem articuladas
 
 ## Publicações nesta wiki
 
@@ -38,6 +42,7 @@ Série "As 3 camadas do coding com IA" — framework que organiza o pensamento s
 - [[wiki/sources/tdd-na-era-dos-agentes]]
 - [[wiki/sources/code-review-na-era-dos-agentes]]
 - [[wiki/sources/engenharia-era-piloto-automatico]]
+- [[wiki/sources/boardroom-mercado-tecnologia-mudou]]
 
 ## Links
 
