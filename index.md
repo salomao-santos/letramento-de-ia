@@ -46,6 +46,7 @@ updated: 2026-06-09
 - [[wiki/concepts/compaction-de-contexto]] — Mecanismo de resumo automático quando janela de contexto enche
 - [[wiki/concepts/llm-wiki-karpathy]] — Arquitetura de wiki mantida por LLM (compilar > recuperar)
 - [[wiki/concepts/memoria-longo-prazo-agentes]] — Mecanismos para reter conhecimento além de uma sessão
+- [[wiki/concepts/product-engineer]] — Dev que "constrói a coisa que constrói a coisa" (senso de produto + harness)
 
 ## Fontes
 
@@ -65,6 +66,7 @@ updated: 2026-06-09
 - [[wiki/sources/full-walkthrough-workflow-ai-coding]] — [2025-06-09] Workshop prático: workflow completo para AI coding com grill, Kanban, TDD e paralelização (Matt Pocock)
 - [[wiki/sources/spec-driven-limite-harness-proximo-passo]] — [2025-06-09] Spec Driven como subset de Harness: 6 falhas, feed forward vs feedback, orquestração multi-agente (Waldemar Neto)
 - [[wiki/sources/spec-driven-guia-completo-waldemar]] — [2025-05-01] Guia prático de SDD: workflow RPI, subagents, otimização de contexto (Waldemar Neto)
+- [[wiki/sources/voltei-do-vale-do-silicio-dev-2026]] — [2025-06-09] Product Engineer: relatos do Vale do Silício, Cursor, Databricks, taste e 4 movimentos práticos (Waldemar Neto)
 
 ## Sínteses
 

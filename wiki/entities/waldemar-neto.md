@@ -4,7 +4,7 @@ type: entity
 tags: [pessoa, autor, engenharia-de-software, brasil, tech-leads-clube]
 created: 2026-06-09
 updated: 2026-06-09
-sources: ["[[wiki/sources/spec-driven-limite-harness-proximo-passo]]", "[[wiki/sources/spec-driven-guia-completo-waldemar]]"]
+sources: ["[[wiki/sources/spec-driven-limite-harness-proximo-passo]]", "[[wiki/sources/spec-driven-guia-completo-waldemar]]", "[[wiki/sources/voltei-do-vale-do-silicio-dev-2026]]"]
 ---
 
 # Waldemar Neto
@@ -15,7 +15,7 @@ Engenheiro de software brasileiro, fundador do **Tech Leads Clube** (@techleadsc
 
 ## Contribuição principal
 
-Série de vídeos sobre Spec-Driven Development e Harness Engineering no canal do Tech Leads Clube. Combina visão prática (tutorial) com análise crítica (limitações).
+Série de vídeos sobre Spec-Driven Development, Harness Engineering e Product Engineer no canal do Tech Leads Clube. Combina visão prática (tutorial) com análise crítica (limitações). Viajou ao Vale do Silício e trouxe relatos de empresas como Cursor, Stripe, Databricks e Try.
 
 ## Posições-chave
 
@@ -35,10 +35,21 @@ Série de vídeos sobre Spec-Driven Development e Harness Engineering no canal d
 - **TLC Spec Driven** (skill do Tech Leads Clube, criada por Felipe Rodrigues): skill flexível de spec-driven development
 - **PBQ Framework**: implementação experimental de harness completo sobre spec-driven
 
+## Posições-chave (vídeo Vale do Silício)
+
+- **Product Engineer** = "constrói a coisa que constrói a coisa" — perfil em alta demanda
+- Duas faces inseparáveis: senso de produto (taste, PM, analytics) + harness/qualidade
+- IA acelera quem já tem **alavanca** — construir alavanca é a habilidade #1
+- Dev profissional no Vale virou orquestrador com autonomia total (sem manager tradicional)
+- Gap Brasil × Vale é oportunidade: quem se posiciona ganha 1-2 anos de vantagem
+- Taste: julgamento estético e de qualidade sem regra ou demanda explícita
+- 4 movimentos práticos: mentalidade de produto, reunião com PM, peça de harness, system design
+
 ## Publicações nesta wiki
 
 - [[wiki/sources/spec-driven-limite-harness-proximo-passo]]
 - [[wiki/sources/spec-driven-guia-completo-waldemar]]
+- [[wiki/sources/voltei-do-vale-do-silicio-dev-2026]]
 
 ## Links
 

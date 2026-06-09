@@ -4,7 +4,7 @@ type: concept
 tags: [harness-engineering, agentes-ia, ferramentas]
 created: 2026-06-08
 updated: 2026-06-09
-sources: ["[[wiki/sources/as-3-camadas-do-coding-com-ia]]", "[[wiki/sources/arquitetura-na-era-dos-agentes]]", "[[wiki/sources/engenharia-era-piloto-automatico]]", "[[wiki/sources/software-fundamentals-matter-more-than-ever]]", "[[wiki/sources/harness-beyond-skills-sensors]]", "[[wiki/sources/spec-driven-limite-harness-proximo-passo]]"]
+sources: ["[[wiki/sources/as-3-camadas-do-coding-com-ia]]", "[[wiki/sources/arquitetura-na-era-dos-agentes]]", "[[wiki/sources/engenharia-era-piloto-automatico]]", "[[wiki/sources/software-fundamentals-matter-more-than-ever]]", "[[wiki/sources/harness-beyond-skills-sensors]]", "[[wiki/sources/spec-driven-limite-harness-proximo-passo]]", "[[wiki/sources/voltei-do-vale-do-silicio-dev-2026]]"]
 ---
 
 # Harness Engineering
@@ -92,14 +92,29 @@ Insight do time OpenAI (Ryan LeCompte) e reforçado por Böckeler: equipes produ
 
 Paralelo com Kent Beck (via [[wiki/entities/matt-pocock]]): "Invest in the design of the system every day."
 
+## Quem constrói o Harness: Product Engineer
+
+[[wiki/concepts/product-engineer]]: o perfil em alta demanda em 2026, segundo relatos do Vale do Silício ([[wiki/sources/voltei-do-vale-do-silicio-dev-2026]]). O Product Engineer é definido como "quem constrói a coisa que constrói a coisa" — combinando senso de produto com construção de harness/infra de qualidade.
+
+Exemplos concretos do Cursor:
+- Code review automatizado por t-shirt size
+- Specs estruturadas para agentes
+- MCP central com governança
+- Self healing (agente arruma PRs sozinho)
+- Agentes que abrem PRs para melhorar código
+
+> O Product Engineer constrói o outer harness para que builders (e agentes) entreguem em produção com segurança.
+
 ## Ver também
 
 - [[wiki/concepts/tres-camadas-coding-ia]]
 - [[wiki/concepts/ambient-affordances]]
 - [[wiki/concepts/spec-driven-development]]
 - [[wiki/concepts/sensores-computacionais]]
+- [[wiki/concepts/product-engineer]] — quem constrói o harness na prática
 - [[wiki/sources/harness-engineering-fowler]] — artigo fonte original
 - [[wiki/sources/maintainability-sensors]] — aplicação prática dos sensores
 - [[wiki/sources/harness-beyond-skills-sensors]] — deep dive em sensores com experimento
 - [[wiki/sources/software-fundamentals-matter-more-than-ever]] — skills como guides práticos
 - [[wiki/sources/spec-driven-limite-harness-proximo-passo]] — spec-driven como subset, multi-agente, 6 falhas
+- [[wiki/sources/voltei-do-vale-do-silicio-dev-2026]] — Product Engineer como quem constrói o harness

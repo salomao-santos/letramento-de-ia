@@ -7,6 +7,12 @@ updated: 2026-06-09
 
 # Log de Operações
 
+## [2026-06-09] ingest | Voltei do Vale do Silício: Esse é o Dev que QUEREM em 2026 (Waldemar Neto)
+- Fonte: "Voltei do Vale do Silício: Esse é o Dev que QUEREM em 2026" por Waldemar Neto (Tech Leads Clube), YouTube (2025-06-09), ~16min
+- Páginas criadas: wiki/sources/voltei-do-vale-do-silicio-dev-2026, wiki/concepts/product-engineer
+- Páginas atualizadas: wiki/entities/waldemar-neto (nova fonte, posições-chave do Vale), wiki/entities/cursor (práticas internas, Canvas, 40-50% não-devs, cloud agents), wiki/concepts/harness-engineering (seção Product Engineer como quem constrói o harness), index.md
+- Observações: Vídeo com relatos de primeira mão após visita ao Vale do Silício (Cursor, Try, Stripe, Databricks). Contribuição nova principal: conceito de Product Engineer com duas faces (senso de produto + harness/qualidade), "taste" como skill, 4 histórias concretas (orquestração entre reuniões, 5 cloud agents paralelos, dados de produção via MCP antes de codar, Canvas para investigação de incidentes), gap Brasil × Vale como oportunidade, 4 movimentos práticos. Reforça fortemente: harness engineering, código como uma das skills (não a principal), autonomia e contexto de negócio como alavanca.
+
 ## [2026-06-09] ingest | Spec-Driven Development: A Habilidade #1 para Devs de 2026 (Guia Completo) (Waldemar Neto)
 - Fonte: "Spec-Driven Development: A Habilidade #1 para Devs de 2026 (Guia Completo)" por Waldemar Neto (Tech Leads Clube), YouTube (2025-05-01), ~12min
 - Páginas criadas: wiki/sources/spec-driven-guia-completo-waldemar, wiki/entities/waldemar-neto
