@@ -4,7 +4,7 @@ type: concept
 tags: [arquitetura, agentes-ia, estrutura-de-codigo, deep-modules]
 created: 2026-06-08
 updated: 2026-06-09
-sources: ["[[wiki/sources/arquitetura-na-era-dos-agentes]]", "[[wiki/sources/software-fundamentals-matter-more-than-ever]]"]
+sources: ["[[wiki/sources/arquitetura-na-era-dos-agentes]]", "[[wiki/sources/software-fundamentals-matter-more-than-ever]]", "[[wiki/sources/full-walkthrough-workflow-ai-coding]]"]
 ---
 
 # Ambient Affordances
@@ -56,6 +56,14 @@ Deep modules:                   Shallow modules:
 ```
 
 Implicação prática: reestruturar em deep modules é a ação de maior impacto para tornar um codebase "IA-friendly".
+
+### Demonstração prática (workshop)
+
+No workshop, Matt usa a skill "Improve Codebase Architecture" que escaneia o codebase e identifica clusters de módulos que podem ser aprofundados. Exemplo real: o video editor do seu app foi reestruturado em um único deep module testável end-to-end (front-end → back-end), permitindo que a IA visse e testasse o fluxo inteiro.
+
+> "If you take one thing away from today, just try running this skill on your repo and see what happens."
+
+O humano **design a interface**, delega a implementação. Deep modules viram gray boxes: o humano conhece o shape e o contrato, mas não precisa revisar cada detalhe interno.
 
 ## Impacto
 

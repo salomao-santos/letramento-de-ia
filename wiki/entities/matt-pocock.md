@@ -4,7 +4,7 @@ type: entity
 tags: [pessoa, educador, typescript, ai-coding]
 created: 2026-06-09
 updated: 2026-06-09
-sources: ["[[wiki/sources/software-fundamentals-matter-more-than-ever]]"]
+sources: ["[[wiki/sources/software-fundamentals-matter-more-than-ever]]", "[[wiki/sources/full-walkthrough-workflow-ai-coding]]"]
 ---
 
 # Matt Pocock
@@ -25,9 +25,25 @@ Defende que fundamentos de engenharia de software são **mais** importantes na e
 
 ## Contribuições relevantes
 
-- **Skill "Grill Me":** força a IA a interrogar o usuário até atingir entendimento compartilhado
+- **Skill "Grill Me":** força a IA a interrogar o usuário até atingir entendimento compartilhado (22-100 perguntas)
 - **Skill "Ubiquitous Language":** escaneia o codebase e gera markdown com terminologia alinhada
 - **Skill "Improve Codebase Architecture":** reorganiza código em deep modules
+- **Skill "Write a PRD":** transforma design concept em documento de destino (user stories + decisions)
+- **Skill "PRD to Issues":** quebra PRD em vertical slices com blocking relationships (Kanban)
+- **Sandcastle:** lib TypeScript para paralelizar agentes AFK em Docker (implementer/reviewer/merger)
+
+## Workflow completo (workshop)
+
+Demonstrado em workshop de 1h36min com codebase real:
+
+1. **Grill Me** — alinhamento até shared design concept
+2. **PRD** — sumarização do destino (não revisa: confia no alinhamento)
+3. **Kanban Board** — DAG de tickets com vertical slices e blocking
+4. **Ralph loop** — implementação AFK com TDD (Sonnet)
+5. **Automated Review** — review em contexto limpo (Opus)
+6. **QA humana** — imposição de taste, gera novos tickets
+
+Usa modelos diferentes por fase: Sonnet para implementação, Opus para review.
 
 ## Ferramentas que usa
 
@@ -42,5 +58,7 @@ Defende que fundamentos de engenharia de software são **mais** importantes na e
 ## Referências
 
 - [[wiki/sources/software-fundamentals-matter-more-than-ever]]
+- [[wiki/sources/full-walkthrough-workflow-ai-coding]]
 - YouTube: Matt Pocock
 - Site: aihero.dev
+- GitHub: mattpocock/course-video-manager (744+ issues closed)

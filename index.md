@@ -2,7 +2,7 @@
 title: "Índice da Wiki"
 type: index
 created: 2026-06-08
-updated: 2026-06-08
+updated: 2026-06-09
 ---
 
 # Índice da Wiki
@@ -21,6 +21,10 @@ updated: 2026-06-08
 - [[wiki/entities/opencode]] — Agente de coding open-source, agnóstico de provider
 - [[wiki/entities/codex-openai]] — Agente de coding da OpenAI
 - [[wiki/entities/kiro-ide]] — IDE da AWS com workflow spec-driven (Requirements → Design → Tasks)
+- [[wiki/entities/fabio-akita]] — Programador e criador de conteúdo, autor de análise técnica sobre memória de agentes
+- [[wiki/entities/andrej-karpathy]] — Pesquisador de IA, criador do padrão LLM Wiki
+- [[wiki/entities/agentmemory]] — Servidor MCP open-source para memória persistente de agentes
+- [[wiki/entities/matt-pocock]] — Educador TypeScript, defensor de fundamentos na era IA (skills, deep modules)
 
 ## Conceitos
 
@@ -38,6 +42,9 @@ updated: 2026-06-08
 - [[wiki/concepts/sanity-checks]] — Cheque de sanidade automatizado antes de produção
 - [[wiki/concepts/multimodelo-slm]] — Futuro multimodelo e Specific Language Models
 - [[wiki/concepts/formacao-novos-engenheiros]] — Problem based learning + pair programming na era IA
+- [[wiki/concepts/compaction-de-contexto]] — Mecanismo de resumo automático quando janela de contexto enche
+- [[wiki/concepts/llm-wiki-karpathy]] — Arquitetura de wiki mantida por LLM (compilar > recuperar)
+- [[wiki/concepts/memoria-longo-prazo-agentes]] — Mecanismos para reter conhecimento além de uma sessão
 
 ## Fontes
 
@@ -50,6 +57,11 @@ updated: 2026-06-08
 - [[wiki/sources/maintainability-sensors]] — [2026-05-26] Walkthrough prático de sensores de manutenibilidade
 - [[wiki/sources/spec-driven-development]] — [2026-06-08] Análise crítica de SDD: Kiro, spec-kit e Tessl
 - [[wiki/sources/engenharia-era-piloto-automatico]] — [2026-06-05] Podcast: DDD, multimodelo, formação, liderança na era IA
+- [[wiki/sources/memoria-agentes-karpathy-agentmemory]] — [2026-05-18] Compaction nos 3 agentes + LLM Wiki + agentmemory
+- [[wiki/sources/software-fundamentals-matter-more-than-ever]] — [2025-06-08] Fundamentos de software importam mais que nunca na era IA (Matt Pocock)
+- [[wiki/sources/harness-beyond-skills-sensors]] — [2026-06-08] Deep dive em sensores: experimento com/sem, sensor sidecar, harness templates (Böckeler & Ford)
+- [[wiki/sources/boardroom-mercado-tecnologia-mudou]] — [2026-06-26] Mercado mudou: checkpoints, DDD+Design+SystemThinking, Build to Learn vs Earn (Santos & Viana)
+- [[wiki/sources/full-walkthrough-workflow-ai-coding]] — [2025-06-09] Workshop prático: workflow completo para AI coding com grill, Kanban, TDD e paralelização (Matt Pocock)
 
 ## Sínteses
 

@@ -4,7 +4,7 @@ type: concept
 tags: [tdd, testes, especificação, coding-com-ia]
 created: 2026-06-08
 updated: 2026-06-09
-sources: ["[[wiki/sources/tdd-na-era-dos-agentes]]", "[[wiki/sources/engenharia-era-piloto-automatico]]", "[[wiki/sources/software-fundamentals-matter-more-than-ever]]"]
+sources: ["[[wiki/sources/tdd-na-era-dos-agentes]]", "[[wiki/sources/engenharia-era-piloto-automatico]]", "[[wiki/sources/software-fundamentals-matter-more-than-ever]]", "[[wiki/sources/full-walkthrough-workflow-ai-coding]]"]
 ---
 
 # TDD como Especificação
@@ -48,6 +48,14 @@ Devs em projetos bem testados são mais lentos com IA (METR). Isso é **bom**: s
 ## TDD como limite de velocidade (Matt Pocock)
 
 [[wiki/entities/matt-pocock|Matt Pocock]] reformula: "a taxa de feedback é seu limite de velocidade" (conceito de *outrunning your headlights* do Pragmatic Programmer). A IA por padrão gera muito código antes de validar. TDD força small steps obrigatórios.
+
+No workshop prático, Matt demonstra TDD dentro do **Ralph loop** (implementação AFK):
+- O agente escreve um teste que falha (RED), confirma a falha, implementa (GREEN)
+- Isso é "absolutely essential" porque sem feedback loops o agente "codes blind"
+- TDD torna mais difícil colar porque o código é instrumentado antes de existir
+- Resultado empírico: codebase de workshop passou a ter 284 testes com qualidade razoável
+
+> "If your code base doesn't have feedback loops, you're never ever ever going to get decent output out of AI."
 
 Complemento: codebases com **deep modules** (interfaces simples, muita funcionalidade interna) são mais testáveis porque se testa na interface. Isso cria um ciclo virtuoso: deep modules → facilidade de teste → TDD funciona melhor → codebase melhora → IA produz melhor código.
 

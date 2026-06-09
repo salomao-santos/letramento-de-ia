@@ -4,7 +4,7 @@ type: concept
 tags: [spec-driven-development, workflows, especificação]
 created: 2026-06-08
 updated: 2026-06-09
-sources: ["[[wiki/sources/spec-driven-development]]", "[[wiki/sources/software-fundamentals-matter-more-than-ever]]"]
+sources: ["[[wiki/sources/spec-driven-development]]", "[[wiki/sources/software-fundamentals-matter-more-than-ever]]", "[[wiki/sources/full-walkthrough-workflow-ai-coding]]"]
 ---
 
 # Spec-Driven Development (SDD)
@@ -48,6 +48,12 @@ Diferente de **memory bank** (contexto geral para todas as sessões):
 [[wiki/entities/matt-pocock|Matt Pocock]] testou o ciclo "spec → code → ignore code → edit spec → regenerate" e constatou degradação progressiva: a cada iteração, o código ficava pior. Conclusão: specs-to-code é "vibe coding por outro nome" quando não se investe no design do sistema.
 
 A entropia de software (Pragmatic Programmer) se aplica: sem investimento consciente no design a cada mudança, o sistema se degrada inevitavelmente. A spec sozinha não impede isso.
+
+No workshop prático, Matt reforça: "This is not specs to code. This is not where we're ignoring the code. We actually keep the code in mind throughout the whole process." A alternativa é:
+- Usar grill session para **alinhamento** (não para gerar artefato)
+- PRD como documento de destino descartável (doc rot se mantido)
+- Manter mapa mental dos módulos durante todo o planejamento
+- Feedback loops (TDD, types) como validação real, não a spec
 
 ## Valor real
 
