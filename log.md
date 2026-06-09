@@ -7,6 +7,12 @@ updated: 2026-06-09
 
 # Log de Operações
 
+## [2026-06-09] ingest | Clean Architecture está te CUSTANDO CARO na era da IA (Waldemar Neto)
+- Fonte: "Clean Architecture está te CUSTANDO CARO na era da IA" por Waldemar Neto (Tech Leads Clube), YouTube (2025-06-26), ~16min
+- Páginas criadas: wiki/sources/clean-architecture-custando-caro-era-ia, wiki/concepts/custo-abstracoes-era-ia
+- Páginas atualizadas: wiki/entities/waldemar-neto (novas posições-chave, nova fonte), wiki/concepts/ambient-affordances (dados Navigation Paradox, nova fonte), wiki/concepts/sensores-computacionais (cross-ref, alternativa barata a Clean Architecture), index.md
+- Observações: Vídeo que questiona implementação ritualística de Clean Architecture na era dos agentes. Contribuições novas: paper Navigation Paradox (2026) com dados quantitativos (76% acurácia, 58% ignore de ferramentas), conceitos "abstraction bloat" (Addy Osmani) e "abstraction illusion" (Super Productivity), distinção clara encapsulamento vs inversão de dependência, regra "estratégico primeiro, flat depois, abstrai por dor", YAGNI escalado pela IA. Reforça fortemente: DDD estratégico como otimização de contexto, organização por domínio, deep modules, testes de comportamento e lint rules como alternativa barata a camadas arquiteturais.
+
 ## [2026-06-09] ingest | Voltei do Vale do Silício: Esse é o Dev que QUEREM em 2026 (Waldemar Neto)
 - Fonte: "Voltei do Vale do Silício: Esse é o Dev que QUEREM em 2026" por Waldemar Neto (Tech Leads Clube), YouTube (2025-06-09), ~16min
 - Páginas criadas: wiki/sources/voltei-do-vale-do-silicio-dev-2026, wiki/concepts/product-engineer

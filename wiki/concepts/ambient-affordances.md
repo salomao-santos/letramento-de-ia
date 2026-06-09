@@ -4,7 +4,7 @@ type: concept
 tags: [arquitetura, agentes-ia, estrutura-de-codigo, deep-modules]
 created: 2026-06-08
 updated: 2026-06-09
-sources: ["[[wiki/sources/arquitetura-na-era-dos-agentes]]", "[[wiki/sources/software-fundamentals-matter-more-than-ever]]", "[[wiki/sources/full-walkthrough-workflow-ai-coding]]"]
+sources: ["[[wiki/sources/arquitetura-na-era-dos-agentes]]", "[[wiki/sources/software-fundamentals-matter-more-than-ever]]", "[[wiki/sources/full-walkthrough-workflow-ai-coding]]", "[[wiki/sources/clean-architecture-custando-caro-era-ia]]"]
 ---
 
 # Ambient Affordances
@@ -36,6 +36,10 @@ Quando um time tem um template padronizado para novo serviço (estrutura de past
 | `notifications/` | `models/` |
 
 Organização por domínio é infinitamente mais navegável para agentes. O contexto fica junto. A fronteira fica visível.
+
+### Dados quantitativos (Navigation Paradox, 2026)
+
+[[wiki/sources/clean-architecture-custando-caro-era-ia]]: pastas por camada (domain/application/infrastructure/presentation) forçam o agente a abrir 7-13 arquivos por feature — em vertical slices seria 1. O paper mediu que Claude Code acerta apenas ~76% dos arquivos necessários quando DI esconde dependências, e ignora ferramentas de navegação 58% das vezes (heurística: "glob+read já dão 80%").
 
 ## Deep Modules como Affordance (Matt Pocock / Ousterhout)
 
@@ -74,5 +78,7 @@ Times greenfield podem embutir harnessability desde o dia 1. As escolhas de tecn
 - [[wiki/concepts/harness-engineering]]
 - [[wiki/concepts/sensores-computacionais]]
 - [[wiki/concepts/tdd-como-especificacao]] — deep modules facilitam TDD (testa-se na interface)
+- [[wiki/concepts/custo-abstracoes-era-ia]] — por que flat > ritualístico para agentes
 - [[wiki/sources/arquitetura-na-era-dos-agentes]]
 - [[wiki/sources/software-fundamentals-matter-more-than-ever]]
+- [[wiki/sources/clean-architecture-custando-caro-era-ia]]

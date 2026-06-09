@@ -4,7 +4,7 @@ type: entity
 tags: [pessoa, autor, engenharia-de-software, brasil, tech-leads-clube]
 created: 2026-06-09
 updated: 2026-06-09
-sources: ["[[wiki/sources/spec-driven-limite-harness-proximo-passo]]", "[[wiki/sources/spec-driven-guia-completo-waldemar]]", "[[wiki/sources/voltei-do-vale-do-silicio-dev-2026]]"]
+sources: ["[[wiki/sources/spec-driven-limite-harness-proximo-passo]]", "[[wiki/sources/spec-driven-guia-completo-waldemar]]", "[[wiki/sources/voltei-do-vale-do-silicio-dev-2026]]", "[[wiki/sources/clean-architecture-custando-caro-era-ia]]"]
 ---
 
 # Waldemar Neto
@@ -29,6 +29,12 @@ Série de vídeos sobre Spec-Driven Development, Harness Engineering e Product E
 - Analogia GPS: feed forward = rota, feedback = recálculo de rota
 - 6 falhas de agentes (Anthropic): spec cobre 2 de 6 completamente
 - Custo real: 51 centavos para todo-list completa com QA loop
+- Clean Architecture ritualística tem custo mensurável em tokens/acurácia — princípios válidos, cerimônia não
+- "Estratégico primeiro, flat depois, abstrai por dor" — regra para times
+- DDD Estratégico (bounded context, linguagem ubíqua) ficou mais importante com IA; DDD tático vale questionar peça por peça
+- Encapsulamento ≠ Inversão de dependência — confusão gera over-engineering
+- YAGNI escalado: IA gera abstração preventiva em minutos, custo aparece depois
+- Paper Navigation Paradox (2026): agente perde 1 em 4 arquivos com DI escondida
 
 ## Ferramentas/Skills
 
@@ -50,6 +56,7 @@ Série de vídeos sobre Spec-Driven Development, Harness Engineering e Product E
 - [[wiki/sources/spec-driven-limite-harness-proximo-passo]]
 - [[wiki/sources/spec-driven-guia-completo-waldemar]]
 - [[wiki/sources/voltei-do-vale-do-silicio-dev-2026]]
+- [[wiki/sources/clean-architecture-custando-caro-era-ia]]
 
 ## Links
 

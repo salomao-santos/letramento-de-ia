@@ -4,7 +4,7 @@ type: concept
 tags: [determinismo, ci-cd, linter, testes, arquitetura]
 created: 2026-06-08
 updated: 2026-06-09
-sources: ["[[wiki/sources/as-3-camadas-do-coding-com-ia]]", "[[wiki/sources/arquitetura-na-era-dos-agentes]]", "[[wiki/sources/tdd-na-era-dos-agentes]]", "[[wiki/sources/harness-beyond-skills-sensors]]", "[[wiki/sources/spec-driven-limite-harness-proximo-passo]]"]
+sources: ["[[wiki/sources/as-3-camadas-do-coding-com-ia]]", "[[wiki/sources/arquitetura-na-era-dos-agentes]]", "[[wiki/sources/tdd-na-era-dos-agentes]]", "[[wiki/sources/harness-beyond-skills-sensors]]", "[[wiki/sources/spec-driven-limite-harness-proximo-passo]]", "[[wiki/sources/clean-architecture-custando-caro-era-ia]]"]
 ---
 
 # Sensores Computacionais
@@ -78,5 +78,7 @@ Questão em aberto: se sensores cobrem 40% dos casos que um guide tentava preven
 - [[wiki/concepts/tres-camadas-coding-ia]]
 - [[wiki/concepts/harness-engineering]]
 - [[wiki/concepts/mutation-testing]]
+- [[wiki/concepts/custo-abstracoes-era-ia]] — sensores como alternativa barata a Clean Architecture ritualística
 - [[wiki/sources/harness-beyond-skills-sensors]]
 - [[wiki/sources/maintainability-sensors]]
+- [[wiki/sources/clean-architecture-custando-caro-era-ia]]
