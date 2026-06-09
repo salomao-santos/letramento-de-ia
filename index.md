@@ -26,6 +26,7 @@ updated: 2026-06-09
 - [[wiki/entities/agentmemory]] — Servidor MCP open-source para memória persistente de agentes
 - [[wiki/entities/matt-pocock]] — Educador TypeScript, defensor de fundamentos na era IA (skills, deep modules)
 - [[wiki/entities/waldemar-neto]] — Fundador do Tech Leads Clube, autor de conteúdo sobre Spec-Driven e Harness Engineering
+- [[wiki/entities/felipe-rodrigues]] — Co-host do Tech Leads Clube, criador da skill TLC Spec Driven
 
 ## Conceitos
 
@@ -70,6 +71,7 @@ updated: 2026-06-09
 - [[wiki/sources/voltei-do-vale-do-silicio-dev-2026]] — [2025-06-09] Product Engineer: relatos do Vale do Silício, Cursor, Databricks, taste e 4 movimentos práticos (Waldemar Neto)
 - [[wiki/sources/clean-architecture-custando-caro-era-ia]] — [2025-06-26] Clean Architecture ritualística vs princípios: custo em tokens, Navigation Paradox, YAGNI escalado (Waldemar Neto)
 - [[wiki/sources/fluxo-completo-dev-avancado-ia]] — [2025-01-25] Fluxo completo de dev com IA: RPI prático, worktrees, paralelização, setup mínimo (Waldemar Neto)
+- [[wiki/sources/rules-skills-mcps-subagents-waldemar]] — [2025-02-07] Rules, Skills, MCPs e Subagents: aula completa sobre produtividade com IA (Waldemar Neto & Felipe Rodrigues)
 
 ## Sínteses
 

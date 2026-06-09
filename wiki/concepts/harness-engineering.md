@@ -4,7 +4,7 @@ type: concept
 tags: [harness-engineering, agentes-ia, ferramentas]
 created: 2026-06-08
 updated: 2026-06-09
-sources: ["[[wiki/sources/as-3-camadas-do-coding-com-ia]]", "[[wiki/sources/arquitetura-na-era-dos-agentes]]", "[[wiki/sources/engenharia-era-piloto-automatico]]", "[[wiki/sources/software-fundamentals-matter-more-than-ever]]", "[[wiki/sources/harness-beyond-skills-sensors]]", "[[wiki/sources/spec-driven-limite-harness-proximo-passo]]", "[[wiki/sources/voltei-do-vale-do-silicio-dev-2026]]", "[[wiki/sources/fluxo-completo-dev-avancado-ia]]"]
+sources: ["[[wiki/sources/as-3-camadas-do-coding-com-ia]]", "[[wiki/sources/arquitetura-na-era-dos-agentes]]", "[[wiki/sources/engenharia-era-piloto-automatico]]", "[[wiki/sources/software-fundamentals-matter-more-than-ever]]", "[[wiki/sources/harness-beyond-skills-sensors]]", "[[wiki/sources/spec-driven-limite-harness-proximo-passo]]", "[[wiki/sources/voltei-do-vale-do-silicio-dev-2026]]", "[[wiki/sources/fluxo-completo-dev-avancado-ia]]", "[[wiki/sources/rules-skills-mcps-subagents-waldemar]]"]
 ---
 
 # Harness Engineering
@@ -46,6 +46,23 @@ Definição aceita por [[wiki/entities/martin-fowler]], OpenAI, LangChain, Anthr
 **Diferença-chave:** MCP busca conhecimento que está **em outro lugar** (Confluence, Jira). Skill é instrução **local** de como usar esse conhecimento. Docs são referência **persistente** do projeto.
 
 **Investimento incremental:** "Cada vez que gero um plano que falta algo, melhoro a documentação até atingir o Nirvana." Levou dias para criar o contexto; o retorno é uma feature de 7 dias em 1 hora.
+
+### Evolução do Outer Harness: Skills substituem Custom Sub Agents
+
+[[wiki/sources/rules-skills-mcps-subagents-waldemar]] documenta a evolução histórica do outer harness:
+
+**Antes (2024):** capabilities e isolamento de contexto estavam misturados em custom sub agents. Resultado: sub agents de 2000-4000 linhas que consumiam metade do contexto ao iniciar.
+
+**Agora (2025):** separação clara em dois conceitos:
+
+| Necessidade | Solução Antiga | Solução Atual |
+|-------------|---------------|---------------|
+| Habilidade específica (criar teste, buscar Jira) | Custom sub agent | **Skill** (~66 linhas, portável) |
+| Processo isolado (paralelização, pesquisa pesada) | Custom sub agent | **Sub agent genérico** (Cursor/Claude Code nativo) |
+
+**Progressive Disclosure** completa o quadro: em vez de carregar tudo na memória do agente ao iniciar, cada componente do harness (rules, skills, MCPs) carrega sob demanda. O agente descobre o que precisa e busca.
+
+Mensagem consensual da indústria (Cursor, Anthropic, Claude Code): **"Foquem em criar skills, que a parte de agente a gente vai resolver."**
 
 ### Clarificação terminológica (Böckeler & Ford)
 

@@ -4,7 +4,7 @@ type: entity
 tags: [pessoa, autor, engenharia-de-software, brasil, tech-leads-clube]
 created: 2026-06-09
 updated: 2026-06-09
-sources: ["[[wiki/sources/spec-driven-limite-harness-proximo-passo]]", "[[wiki/sources/spec-driven-guia-completo-waldemar]]", "[[wiki/sources/voltei-do-vale-do-silicio-dev-2026]]", "[[wiki/sources/clean-architecture-custando-caro-era-ia]]", "[[wiki/sources/fluxo-completo-dev-avancado-ia]]"]
+sources: ["[[wiki/sources/spec-driven-limite-harness-proximo-passo]]", "[[wiki/sources/spec-driven-guia-completo-waldemar]]", "[[wiki/sources/voltei-do-vale-do-silicio-dev-2026]]", "[[wiki/sources/clean-architecture-custando-caro-era-ia]]", "[[wiki/sources/fluxo-completo-dev-avancado-ia]]", "[[wiki/sources/rules-skills-mcps-subagents-waldemar]]"]
 ---
 
 # Waldemar Neto
@@ -60,6 +60,17 @@ Série de vídeos sobre Spec-Driven Development, Harness Engineering e Product E
 - Documentação incremental: cada plano que falha revela lacuna → atualizar docs até atingir "Nirvana"
 - Diferença MCP vs Skill vs Docs: remoto (API para LLMs) vs tática local (reutilizável) vs persistente no repo
 
+## Posições-chave (Rules, Skills, MCPs e Sub Agents)
+
+- Progressive Disclosure: IA descobre e carrega contexto sob demanda — não tudo de uma vez
+- Custom sub agents morreram: separar capability (skill) de isolamento de contexto (sub agent genérico)
+- Regra 40%: a partir de 40% da janela de contexto ocupada, respostas perdem precisão
+- Skills são portáveis entre projetos e IDEs — são o novo padrão de capabilities
+- Foco em criar skills, não agentes: "a parte de agente a gente vai resolver" (mensagem da indústria)
+- Sub agents genéricos do Cursor/Claude Code paralelizam automaticamente e buscam skills necessárias
+- MCP é melhor para dados dinâmicos; Skill é melhor para conhecimento estável (evita latência de chamada HTTP)
+- Marketplace interno de skills versionadas é padrão emergente em empresas
+
 ## Publicações nesta wiki
 
 - [[wiki/sources/spec-driven-limite-harness-proximo-passo]]
@@ -67,6 +78,7 @@ Série de vídeos sobre Spec-Driven Development, Harness Engineering e Product E
 - [[wiki/sources/voltei-do-vale-do-silicio-dev-2026]]
 - [[wiki/sources/clean-architecture-custando-caro-era-ia]]
 - [[wiki/sources/fluxo-completo-dev-avancado-ia]]
+- [[wiki/sources/rules-skills-mcps-subagents-waldemar]]
 
 ## Links
 

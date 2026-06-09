@@ -4,7 +4,7 @@ type: concept
 tags: [memoria, contexto, agentes, llm, compaction]
 created: 2026-06-09
 updated: 2026-06-09
-sources: ["[[wiki/sources/memoria-agentes-karpathy-agentmemory]]", "[[wiki/sources/full-walkthrough-workflow-ai-coding]]", "[[wiki/sources/spec-driven-guia-completo-waldemar]]", "[[wiki/sources/fluxo-completo-dev-avancado-ia]]"]
+sources: ["[[wiki/sources/memoria-agentes-karpathy-agentmemory]]", "[[wiki/sources/full-walkthrough-workflow-ai-coding]]", "[[wiki/sources/spec-driven-guia-completo-waldemar]]", "[[wiki/sources/fluxo-completo-dev-avancado-ia]]", "[[wiki/sources/rules-skills-mcps-subagents-waldemar]]"]
 ---
 
 # Compaction de Contexto
@@ -69,6 +69,19 @@ Caso real: 90 arquivos modificados com janela de implementação em apenas 50K t
 - **Resultado:** cada etapa começa com contexto limpo, mesmo em funcionalidades grandes
 
 Isso confirma e operacionaliza o princípio "Clear > Compact" de Matt Pocock: em vez de compactar, abrir nova sessão.
+
+### Progressive Disclosure como prevenção
+
+[[wiki/sources/rules-skills-mcps-subagents-waldemar]] introduz **progressive disclosure** como estratégia ativa de prevenção de contexto inflado (complementar a compaction reativa):
+
+- Rules carregam só estrutura de alto nível + ponteiros para docs específicos
+- Skills carregam apenas front matter no início; corpo carrega quando invocada
+- MCPs não ficam todos na memória — agente busca sob demanda (search tool, Anthropic)
+- Sub agents genéricos isolam pesquisa em processo separado → retornam só output resumido
+
+**Regra 40%:** a partir de 40% da janela de 200K tokens ocupada, respostas começam a perder precisão. Complementa a regra 30% como meta ideal e 44% como zona de perigo.
+
+A evolução 2023→2025: de "carregar tudo junto" para "descobrir e carregar só o necessário". O objetivo é que a janela de contexto se mantenha leve não por compactar depois, mas por nunca inflar desnecessariamente.
 
 ## Implementações por agente
 

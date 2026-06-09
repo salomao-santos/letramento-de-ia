@@ -7,6 +7,12 @@ updated: 2026-06-09
 
 # Log de Operações
 
+## [2026-06-09] ingest | Rules, Skills, MCPs e Subagents — DOMINE os principais conceitos (Waldemar Neto & Felipe Rodrigues)
+- Fonte: "Rules, Skills, MCPs e Subagents - DOMINE os principais conceitos de IA para ganhar PRODUTIVIDADE" por Waldemar Neto e Felipe Rodrigues (Tech Leads Clube), YouTube (2025-02-07), ~45min
+- Páginas criadas: wiki/sources/rules-skills-mcps-subagents-waldemar, wiki/entities/felipe-rodrigues
+- Páginas atualizadas: wiki/entities/waldemar-neto (novas posições-chave), wiki/concepts/compaction-de-contexto (progressive disclosure, regra 40%), wiki/concepts/harness-engineering (evolução skills vs sub agents, progressive disclosure), index.md
+- Observações: Aula que documenta a morte dos custom sub agents em favor de skills + sub agents genéricos. Contribuições novas: progressive disclosure como padrão formal (IA descobre e carrega sob demanda), regra 40% (complementa 30% como meta), taxonomia Agent (papel) vs Skill (habilidade), caso concreto de migração sub agent 2000 linhas → skills 66 linhas, marketplace de skills versionadas como padrão enterprise, biblioteca open-source de skills curadas do Tech Leads Clube. Felipe Rodrigues aparece como co-host com contribuições práticas relevantes.
+
 ## [2026-06-09] ingest | Meu fluxo COMPLETO de desenvolvimento avançado com IA (Waldemar Neto)
 - Fonte: "Meu fluxo COMPLETO de desenvolvimento avançado com IA" por Waldemar Neto (Tech Leads Clube), YouTube (2025-01-25), ~22min
 - Páginas criadas: wiki/sources/fluxo-completo-dev-avancado-ia
