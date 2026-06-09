@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="pt"><head><title>Síntese: Engenharia de Software na Era dos Agentes de IA | Wiki</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM Plex Mono&amp;family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta property="og:title" content="Síntese: Engenharia de Software na Era dos Agentes de IA | Wiki"/><meta property="og:description" content="Engenharia de Software na Era dos Agentes de IA Síntese de 9 fontes processadas nesta wiki, conectando os argumentos de zarathon-viana (série “As 3 camadas do coding com IA”) com o ..."/><meta property="og:image" content="https://salomao-santos.github.io/letramento-de-ia/static/og-image.png"/><meta property="og:width" content="1200"/><meta property="og:height" content="675"/><link rel="icon" href="../static/icon.png"/><meta name="description" content="Engenharia de Software na Era dos Agentes de IA Síntese de 9 fontes processadas nesta wiki, conectando os argumentos de zarathon-viana (série “As 3 camadas do coding com IA”) com o ..."/><meta name="generator" content="Quartz"/><link href="../index.css" rel="stylesheet" type="text/css" spa-preserve/><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><script src="../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch("../static/contentIndex.json").then(data => data.json())</script></head><body data-slug="synthesis/overview-engenharia-na-era-ia"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="..">📚 Letramento de IA</a></h2><div class="spacer mobile-only"></div><div class="search"><button class="search-button" id="search-button"><p>Pesquisar</p><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></button><div id="search-container"><div id="search-space"><input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Pesquisar por algo" placeholder="Pesquisar por algo"/><div id="search-layout" data-preview="true"></div></div></div></div><button class="darkmode" id="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="Tema escuro"><title>Tema escuro</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="Tema claro"><title>Tema claro</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button><div class="explorer desktop-only"><button type="button" id="explorer" data-behavior="collapse" data-collapsed="collapsed" data-savestate="true" data-tree="[{&quot;path&quot;:&quot;concepts&quot;,&quot;collapsed&quot;:true},{&quot;path&quot;:&quot;entities&quot;,&quot;collapsed&quot;:true},{&quot;path&quot;:&quot;sources&quot;,&quot;collapsed&quot;:true},{&quot;path&quot;:&quot;synthesis&quot;,&quot;collapsed&quot;:true}]" aria-controls="explorer-content" aria-expanded="false"><h2>Explorador</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-content"><ul class="overflow" id="explorer-ul"><li><div class="folder-outer open"><ul style="padding-left:0;" class="content" data-folderul><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div data-folderpath="concepts"><button class="folder-button"><span class="folder-title">concepts</span></button></div></div><div class="folder-outer "><ul style="padding-left:1.4rem;" class="content" data-folderul="concepts"><li><a href="../concepts/ambient-affordances" data-for="concepts/ambient-affordances">Ambient Affordances</a></li><li><a href="../concepts/tres-camadas-coding-ia" data-for="concepts/tres-camadas-coding-ia">As 3 Camadas do Coding com IA</a></li><li><a href="../concepts/automation-complacency" data-for="concepts/automation-complacency">Automation Complacency</a></li><li><a href="../concepts/code-review-como-portao" data-for="concepts/code-review-como-portao">Code Review como Portão</a></li><li><a href="../concepts/compaction-de-contexto" data-for="concepts/compaction-de-contexto">Compaction de Contexto</a></li><li><a href="../concepts/custo-abstracoes-era-ia" data-for="concepts/custo-abstracoes-era-ia">Custo de Abstrações na Era da IA</a></li><li><a href="../concepts/formacao-novos-engenheiros" data-for="concepts/formacao-novos-engenheiros">Formação de Novos Engenheiros na Era IA</a></li><li><a href="../concepts/harness-engineering" data-for="concepts/harness-engineering">Harness Engineering</a></li><li><a href="../concepts/horas-de-voo-para-devs" data-for="concepts/horas-de-voo-para-devs">Horas de Voo para Devs</a></li><li><a href="../concepts/llm-wiki-karpathy" data-for="concepts/llm-wiki-karpathy">LLM Wiki (Padrão Karpathy)</a></li><li><a href="../concepts/memoria-longo-prazo-agentes" data-for="concepts/memoria-longo-prazo-agentes">Memória de Longo Prazo para Agentes</a></li><li><a href="../concepts/multimodelo-slm" data-for="concepts/multimodelo-slm">Multimodelo e SLMs</a></li><li><a href="../concepts/mutation-testing" data-for="concepts/mutation-testing">Mutation Testing (Teste de Mutação)</a></li><li><a href="../concepts/product-engineer" data-for="concepts/product-engineer">Product Engineer</a></li><li><a href="../concepts/property-based-testing" data-for="concepts/property-based-testing">Property-Based Testing</a></li><li><a href="../concepts/sanity-checks" data-for="concepts/sanity-checks">Sanity Checks para Codebases</a></li><li><a href="../concepts/sensores-computacionais" data-for="concepts/sensores-computacionais">Sensores Computacionais</a></li><li><a href="../concepts/spec-driven-development" data-for="concepts/spec-driven-development">Spec-Driven Development</a></li><li><a href="../concepts/tdd-como-especificacao" data-for="concepts/tdd-como-especificacao">TDD como Especificação</a></li></ul></div></li><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div data-folderpath="entities"><button class="folder-button"><span class="folder-title">entities</span></button></div></div><div class="folder-outer "><ul style="padding-left:1.4rem;" class="content" data-folderul="entities"><li><a href="../entities/agentmemory" data-for="entities/agentmemory">agentmemory</a></li><li><a href="../entities/andrej-karpathy" data-for="entities/andrej-karpathy">Andrej Karpathy</a></li><li><a href="../entities/archunit" data-for="entities/archunit">ArchUnit</a></li><li><a href="../entities/birgitta-bockeler" data-for="entities/birgitta-bockeler">Birgitta Böckeler</a></li><li><a href="../entities/claude-code" data-for="entities/claude-code">Claude Code</a></li><li><a href="../entities/codex-openai" data-for="entities/codex-openai">Codex (OpenAI)</a></li><li><a href="../entities/cursor" data-for="entities/cursor">Cursor</a></li><li><a href="../entities/dependency-cruiser" data-for="entities/dependency-cruiser">dependency-cruiser</a></li><li><a href="../entities/fabio-akita" data-for="entities/fabio-akita">Fabio Akita</a></li><li><a href="../entities/felipe-rodrigues" data-for="entities/felipe-rodrigues">Felipe Rodrigues</a></li><li><a href="../entities/github-copilot" data-for="entities/github-copilot">GitHub Copilot</a></li><li><a href="../entities/kent-beck" data-for="entities/kent-beck">Kent Beck</a></li><li><a href="../entities/kiro-ide" data-for="entities/kiro-ide">Kiro</a></li><li><a href="../entities/martin-fowler" data-for="entities/martin-fowler">Martin Fowler</a></li><li><a href="../entities/matt-pocock" data-for="entities/matt-pocock">Matt Pocock</a></li><li><a href="../entities/opencode" data-for="entities/opencode">OpenCode</a></li><li><a href="../entities/waldemar-neto" data-for="entities/waldemar-neto">Waldemar Neto</a></li><li><a href="../entities/zarathon-viana" data-for="entities/zarathon-viana">Zarathon 'Zara' Viana</a></li></ul></div></li><li><div class="folder-outer "><ul style="padding-left:0;" class="content" data-folderul></ul></div></li><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div data-folderpath="sources"><button class="folder-button"><span class="folder-title">sources</span></button></div></div><div class="folder-outer "><ul style="padding-left:1.4rem;" class="content" data-folderul="sources"><li><a href="../sources/arquitetura-na-era-dos-agentes" data-for="sources/arquitetura-na-era-dos-agentes">Arquitetura de software na era dos agentes: a cerca que o LLM não pula</a></li><li><a href="../sources/as-3-camadas-do-coding-com-ia" data-for="sources/as-3-camadas-do-coding-com-ia">As 3 camadas do coding com IA: onde o engenheiro de verdade ainda faz diferença</a></li><li><a href="../sources/boardroom-mercado-tecnologia-mudou" data-for="sources/boardroom-mercado-tecnologia-mudou">Boardroom 2606-01: O Mercado de Tecnologia Mudou</a></li><li><a href="../sources/clean-architecture-custando-caro-era-ia" data-for="sources/clean-architecture-custando-caro-era-ia">Clean Architecture está te CUSTANDO CARO na era da IA</a></li><li><a href="../sources/devs-sao-os-novos-pilotos" data-for="sources/devs-sao-os-novos-pilotos">Devs são os novos pilotos de avião (e ninguém tá te preparando pra isso)</a></li><li><a href="../sources/engenharia-era-piloto-automatico" data-for="sources/engenharia-era-piloto-automatico">Engenharia de Software na Era do Piloto Automático</a></li><li><a href="../sources/full-walkthrough-workflow-ai-coding" data-for="sources/full-walkthrough-workflow-ai-coding">Full Walkthrough: Workflow for AI Coding</a></li><li><a href="../sources/harness-beyond-skills-sensors" data-for="sources/harness-beyond-skills-sensors">Harness Engineering Beyond Skills: Using Sensors to Keep Your Coding Agent in Check</a></li><li><a href="../sources/harness-engineering-fowler" data-for="sources/harness-engineering-fowler">Harness engineering for coding agent users</a></li><li><a href="../sources/maintainability-sensors" data-for="sources/maintainability-sensors">Maintainability sensors for coding agents</a></li><li><a href="../sources/memoria-agentes-karpathy-agentmemory" data-for="sources/memoria-agentes-karpathy-agentmemory">Memória de Agentes IA: Karpathy LLM Wiki e agentmemory na Prática</a></li><li><a href="../sources/fluxo-completo-dev-avancado-ia" data-for="sources/fluxo-completo-dev-avancado-ia">Meu fluxo COMPLETO de desenvolvimento avançado com IA</a></li><li><a href="../sources/tdd-na-era-dos-agentes" data-for="sources/tdd-na-era-dos-agentes">O teste que você não escreveu virou o bug que o agente escondeu</a></li><li><a href="../sources/rules-skills-mcps-subagents-waldemar" data-for="sources/rules-skills-mcps-subagents-waldemar">Rules, Skills, MCPs e Subagents — DOMINE os principais conceitos de IA para ganhar PRODUTIVIDADE</a></li><li><a href="../sources/code-review-na-era-dos-agentes" data-for="sources/code-review-na-era-dos-agentes">Se teu code review é LGTM automático, o gargalo é tu, não o agente</a></li><li><a href="../sources/software-fundamentals-matter-more-than-ever" data-for="sources/software-fundamentals-matter-more-than-ever">Software Fundamentals Matter More Than Ever</a></li><li><a href="../sources/spec-driven-limite-harness-proximo-passo" data-for="sources/spec-driven-limite-harness-proximo-passo">Spec Driven chegou no limite — Harness Engineering é o próximo passo</a></li><li><a href="../sources/spec-driven-guia-completo-waldemar" data-for="sources/spec-driven-guia-completo-waldemar">Spec-Driven Development: A Habilidade #1 para Devs de 2026 (Guia Completo)</a></li><li><a href="../sources/spec-driven-development" data-for="sources/spec-driven-development">Understanding Spec-Driven-Development: Kiro, spec-kit, and Tessl</a></li><li><a href="../sources/voltei-do-vale-do-silicio-dev-2026" data-for="sources/voltei-do-vale-do-silicio-dev-2026">Voltei do Vale do Silício: Esse é o Dev que QUEREM em 2026</a></li></ul></div></li><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div data-folderpath="synthesis"><button class="folder-button"><span class="folder-title">synthesis</span></button></div></div><div class="folder-outer "><ul style="padding-left:1.4rem;" class="content" data-folderul="synthesis"><li><a href="../synthesis/overview-engenharia-na-era-ia" data-for="synthesis/overview-engenharia-na-era-ia">Síntese: Engenharia de Software na Era dos Agentes de IA</a></li></ul></div></li></ul></div></li><li id="explorer-end"></li></ul></div></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../synthesis/">synthesis</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Síntese: Engenharia de Software na Era dos Agentes de IA</a></div></nav><h1 class="article-title">Síntese: Engenharia de Software na Era dos Agentes de IA</h1><p show-comma="true" class="content-meta"><span>07 de jun. de 2026</span><span>Leitura de 9 min</span></p><ul class="tags"><li><a href="../tags/síntese" class="internal tag-link">síntese</a></li><li><a href="../tags/overview" class="internal tag-link">overview</a></li><li><a href="../tags/engenharia-de-software" class="internal tag-link">engenharia-de-software</a></li><li><a href="../tags/agentes-ia" class="internal tag-link">agentes-ia</a></li><li><a href="../tags/harness-engineering" class="internal tag-link">harness-engineering</a></li></ul></div></div><article class="popover-hint"><h1 id="engenharia-de-software-na-era-dos-agentes-de-ia">Engenharia de Software na Era dos Agentes de IA<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#engenharia-de-software-na-era-dos-agentes-de-ia" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>Síntese de 9 fontes processadas nesta wiki, conectando os argumentos de <a href="../wiki/entities/zarathon-viana" class="internal" data-slug="wiki/entities/zarathon-viana">zarathon-viana</a> (série “As 3 camadas do coding com IA”) com o trabalho de <a href="../wiki/entities/birgitta-bockeler" class="internal" data-slug="wiki/entities/birgitta-bockeler">birgitta-bockeler</a> e <a href="../wiki/entities/martin-fowler" class="internal" data-slug="wiki/entities/martin-fowler">martin-fowler</a> (Harness Engineering, Maintainability Sensors, Spec-Driven Development).</p>
+<hr/>
+<h2 id="a-tese-central">A Tese Central<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#a-tese-central" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>A IA generativa aplicada ao coding é um <strong>amplificador</strong>, não um corretor. Amplifica o que já existe: disciplina vira produtividade; falta de disciplina vira dívida técnica em velocidade industrial.</p>
+<blockquote>
+<p>“A IA não conserta um time; ela amplifica o que já está lá.” — DORA 2025</p>
+</blockquote>
+<p>O engenheiro que se destaca neste cenário não é o que prompta melhor, mas o que <strong>constrói cercas determinísticas</strong> ao redor de um modelo probabilístico.</p>
+<hr/>
+<h2 id="o-framework-3-camadas-de-controle">O Framework: 3 Camadas de Controle<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#o-framework-3-camadas-de-controle" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>(<a href="../wiki/concepts/tres-camadas-coding-ia" class="internal" data-slug="wiki/concepts/tres-camadas-coding-ia">tres-camadas-coding-ia</a>)</p>
+<pre><code>Camada 1 — Modelo       → controle baixo  (escolhe)
+Camada 2 — Ferramenta   → controle médio  (configura, estende)
+Camada 3 — Engenharia   → controle alto   (escreve, define, audita)
+</code></pre>
+<p><strong>Insight:</strong> A maioria da comunidade investe energia na camada 2 (MCPs, prompts, context engineering). Mas a camada 3 oferece mais alavanca por hora investida. Camada 3 é investment capital; as outras são running cost.</p>
+<hr/>
+<h2 id="os-três-pilares-da-camada-3">Os Três Pilares da Camada 3<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#os-três-pilares-da-camada-3" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="1-arquitetura--define-por-onde-o-agente-pode-ir">1. Arquitetura → define POR ONDE o agente pode ir<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1-arquitetura--define-por-onde-o-agente-pode-ir" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>(<a href="../wiki/sources/arquitetura-na-era-dos-agentes" class="internal" data-slug="wiki/sources/arquitetura-na-era-dos-agentes">arquitetura-na-era-dos-agentes</a>)</p>
+<p>O LLM otimiza localmente. Sem cercas, cria dependências circulares, embaralha camadas, pega atalhos. Cada atalho faz sentido isoladamente; acumulados, geram big ball of mud.</p>
+<p><strong>Antídoto:</strong> Clean Architecture, Hexagonal, DDD com bounded contexts explícitos + sensores computacionais (ArchUnit, dependency-cruiser) que <strong>quebram o build</strong> em violações.</p>
+<h3 id="2-testes--define-o-que-o-agente-deve-produzir">2. Testes → define O QUE o agente deve produzir<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2-testes--define-o-que-o-agente-deve-produzir" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>(<a href="../wiki/sources/tdd-na-era-dos-agentes" class="internal" data-slug="wiki/sources/tdd-na-era-dos-agentes">tdd-na-era-dos-agentes</a>)</p>
+<p>Na era dos agentes, teste não é verificação — é <strong>especificação</strong>. O custo de gerar código caiu pra quase zero; o que ficou caro é especificar intenção. Teste é a forma mais determinística de fazer isso.</p>
+<p><strong>Ciclo:</strong> Humano escreve teste (RED) → Agente implementa (GREEN) → Colaboração refatora (REFACTOR)</p>
+<p><strong>Regra de ouro:</strong> nunca delegar o RED pro agente.</p>
+<h3 id="3-code-review--define-se-pode-passar">3. Code Review → define SE pode passar<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#3-code-review--define-se-pode-passar" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>(<a href="../wiki/sources/code-review-na-era-dos-agentes" class="internal" data-slug="wiki/sources/code-review-na-era-dos-agentes">code-review-na-era-dos-agentes</a>)</p>
+<p>O último portão humano antes de produção. O LLM gera código “quase certo” — plausível, bem escrito, e errado de formas sutis. O reviewer precisa caçar o erro convincente, não o erro óbvio (que a máquina já pega).</p>
+<p><strong>Fluxo ideal:</strong> CI (gates duros) → IA review (sensor) → Autor corrige → Humano revisa (juiz)</p>
+<hr/>
+<h2 id="o-modelo-de-harness-engineering">O Modelo de Harness Engineering<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#o-modelo-de-harness-engineering" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>(<a href="../wiki/sources/harness-engineering-fowler" class="internal" data-slug="wiki/sources/harness-engineering-fowler">harness-engineering-fowler</a>, <a href="../wiki/concepts/harness-engineering" class="internal" data-slug="wiki/concepts/harness-engineering">harness-engineering</a>)</p>
+<p>Fórmula canônica: <strong>Agent = Model + Harness</strong></p>
+<h3 id="taxonomia">Taxonomia<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#taxonomia" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th></th><th>Feedforward (Guides)</th><th>Feedback (Sensors)</th></tr></thead><tbody><tr><td><strong>Computational</strong></td><td>Scripts, codemods, LSPs</td><td>Testes, linters, type checkers, ArchUnit</td></tr><tr><td><strong>Inferential</strong></td><td>AGENTS.md, Skills, specs</td><td>Review agents, “LLM as judge”</td></tr></tbody></table></div>
+<h3 id="categorias-de-regulação">Categorias de regulação<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#categorias-de-regulação" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ol>
+<li><strong>Maintainability</strong> — qualidade interna (mais fácil de implementar hoje)</li>
+<li><strong>Architecture Fitness</strong> — fitness functions</li>
+<li><strong>Behaviour</strong> — o “elefante na sala” (ainda muito a resolver)</li>
+</ol>
+<h3 id="o-steering-loop">O Steering Loop<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#o-steering-loop" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Sempre que um problema ocorre múltiplas vezes, melhorar os controles para torná-lo menos provável no futuro. O humano itera no harness; o agente trabalha dentro dele.</p>
+<hr/>
+<h2 id="sensores-na-prática">Sensores na Prática<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#sensores-na-prática" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>(<a href="../wiki/sources/maintainability-sensors" class="internal" data-slug="wiki/sources/maintainability-sensors">maintainability-sensors</a>, <a href="../wiki/concepts/sensores-computacionais" class="internal" data-slug="wiki/concepts/sensores-computacionais">sensores-computacionais</a>)</p>
+<p>Böckeler experimentou em projeto real (TypeScript/NextJS) e documentou:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Quando</th><th>Sensores</th></tr></thead><tbody><tr><td>Durante coding</td><td>Type checker, ESLint, Semgrep, dependency-cruiser, testes, mutation testing incremental, GitLeaks</td></tr><tr><td>Pipeline (CI)</td><td>Todos os acima repetidos em ambiente limpo</td></tr><tr><td>Periodicamente</td><td>Security review (IA), data handling review (IA), dependency freshness, modularity review</td></tr></tbody></table></div>
+<h3 id="aprendizados-chave">Aprendizados-chave<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#aprendizados-chave" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Custom lint messages = “positive prompt injection” (fazem diferença real no comportamento do agente)</li>
+<li>Sensores computacionais: excelentes no nível arquivo/função</li>
+<li>Cross-file concerns: precisam de sensor inferencial (IA) para interpretação semântica</li>
+<li><strong>Mutation testing é crucial</strong> quando testagem é delegada à IA</li>
+</ul>
+<hr/>
+<h2 id="a-analogia-com-a-aviação">A Analogia com a Aviação<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#a-analogia-com-a-aviação" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>(<a href="../wiki/sources/devs-sao-os-novos-pilotos" class="internal" data-slug="wiki/sources/devs-sao-os-novos-pilotos">devs-sao-os-novos-pilotos</a>, <a href="../wiki/concepts/automation-complacency" class="internal" data-slug="wiki/concepts/automation-complacency">automation-complacency</a>)</p>
+<p>O voo Air France 447 (2009) como metáfora: quando o autopilot falha, só quem tem “horas de voo manual” assume. Três fenômenos documentados em aviação que se replicam em dev:</p>
+<ol>
+<li><strong>Perda de habilidades manuais</strong> — devs que nunca debugaram sem IA</li>
+<li><strong>Perda de consciência situacional</strong> — não entender o que o sistema faz</li>
+<li><strong>Automation complacency</strong> — confiar demais, verificar de menos</li>
+</ol>
+<p><strong>Dado perturbador:</strong> Estudo METR mostrou devs 19% mais lentos com IA, mas percebendo 20% mais rápidos. Diferença de percepção de ~40 pontos percentuais.</p>
+<p><strong>Antídoto:</strong> acumular “horas de voo” — projetos próprios, open source, freelance, build in public (<a href="../wiki/concepts/horas-de-voo-para-devs" class="internal" data-slug="wiki/concepts/horas-de-voo-para-devs">horas-de-voo-para-devs</a>)</p>
+<hr/>
+<h2 id="multimodelo-e-sustentabilidade-econômica">Multimodelo e Sustentabilidade Econômica<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#multimodelo-e-sustentabilidade-econômica" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>(<a href="../wiki/concepts/multimodelo-slm" class="internal" data-slug="wiki/concepts/multimodelo-slm">multimodelo-slm</a>, <a href="../wiki/sources/engenharia-era-piloto-automatico" class="internal" data-slug="wiki/sources/engenharia-era-piloto-automatico">engenharia-era-piloto-automatico</a>)</p>
+<p>Modelos atuais são subsidiados (custos devem subir ~10x). A resposta é diversificação:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Fase</th><th>Estratégia</th></tr></thead><tbody><tr><td>Agora</td><td>LLMs subsidiados</td></tr><tr><td>1-2 anos</td><td>Híbrido: LLM caro (raciocínio) + open models (implementação)</td></tr><tr><td>5-10 anos</td><td>SLMs fine-tunados por domínio, rodando localmente (~200MB)</td></tr></tbody></table></div>
+<p><strong>Workflow prático:</strong> Opus para design/thinking + Qwen/DeepSeek para implementação. Resultados comparáveis a 1/5 do custo.</p>
+<hr/>
+<h2 id="formação-de-novos-engenheiros">Formação de Novos Engenheiros<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#formação-de-novos-engenheiros" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>(<a href="../wiki/concepts/formacao-novos-engenheiros" class="internal" data-slug="wiki/concepts/formacao-novos-engenheiros">formacao-novos-engenheiros</a>, <a href="../wiki/sources/engenharia-era-piloto-automatico" class="internal" data-slug="wiki/sources/engenharia-era-piloto-automatico">engenharia-era-piloto-automatico</a>)</p>
+<p>O caminho tradicional (tarefas simples → aprender com seniors) está sendo corroído pela IA. Propostas:</p>
+<ol>
+<li><strong>Problem based learning:</strong> resolver primeiro sem IA, depois com IA</li>
+<li><strong>Pair programming sênior-júnior:</strong> buddies por período longo, repetir 10-20x</li>
+<li><strong>Horas de voo manual obrigatórias:</strong> deploy, monitoramento, debug na mão</li>
+</ol>
+<blockquote>
+<p>“A IA catalisa o output. Quem tem base acelera resultado bom; quem não tem acelera resultado ruim.”</p>
+</blockquote>
+<hr/>
+<h2 id="sanity-checks-e-qualidade-intencional">Sanity Checks e Qualidade Intencional<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#sanity-checks-e-qualidade-intencional" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>(<a href="../wiki/concepts/sanity-checks" class="internal" data-slug="wiki/concepts/sanity-checks">sanity-checks</a>, <a href="../wiki/sources/engenharia-era-piloto-automatico" class="internal" data-slug="wiki/sources/engenharia-era-piloto-automatico">engenharia-era-piloto-automatico</a>)</p>
+<p>Evolução do Sonar: verificações automatizadas no CI que validam se mudanças mantêm o codebase sadio.</p>
+<ul>
+<li><strong>Determinístico:</strong> linters, type checkers, fitness functions</li>
+<li><strong>Probabilístico:</strong> multimodelos validando em consenso</li>
+<li><strong>Pré-mortem:</strong> gerar cenários de falha → criar testes → canário → validação proativa</li>
+</ul>
+<blockquote>
+<p>“A gente nunca fez o software como deveria ter sido feito. Agora não tem mais essa desculpa.”</p>
+</blockquote>
+<hr/>
+<h2 id="spec-driven-development-promessa-e-limites">Spec-Driven Development: Promessa e Limites<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#spec-driven-development-promessa-e-limites" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>(<a href="../wiki/sources/spec-driven-development" class="internal" data-slug="wiki/sources/spec-driven-development">spec-driven-development</a>, <a href="../wiki/concepts/spec-driven-development" class="internal" data-slug="wiki/concepts/spec-driven-development">spec-driven-development</a>)</p>
+<p>Abordagem que propõe spec antes de código. Três níveis: spec-first, spec-anchored, spec-as-source.</p>
+<h3 id="valor-real">Valor real<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#valor-real" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>O princípio de pensar e estruturar antes de pedir ao agente é valioso.</p>
+<h3 id="limites-böckeler">Limites (Böckeler)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#limites-böckeler" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>Workflows one-size-fits-all não funcionam para todas as escalas</li>
+<li>Muitos markdowns para revisar pode ser <strong>pior</strong> que revisar código</li>
+<li>Agente frequentemente ignora partes da spec (context window maior ≠ absorção total)</li>
+<li>Risco de <strong>Verschlimmbesserung</strong> — piorar na tentativa de melhorar</li>
+</ul>
+<h3 id="relação-com-tdd">Relação com TDD<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#relação-com-tdd" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>TDD é uma alternativa/complemento determinístico: o teste como spec executável. Não sofre de não-determinismo como specs em linguagem natural.</p>
+<hr/>
+<h2 id="o-gradiente-determinístico--probabilístico">O Gradiente Determinístico → Probabilístico<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#o-gradiente-determinístico--probabilístico" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Uma ideia transversal a todas as fontes:</p>
+<pre><code>Determinístico (confiável)                    Probabilístico (não-confiável)
+────────────────────────────────────────────────────────────────────────────
+Testes    Linters    ArchUnit    Type check  │  LLM gera    LLM revisa    LLM spec
+                                             │
+←── Sensores computacionais ──────────────── │ ── Sensores inferenciais ──→
+</code></pre>
+<p>A engenharia de software clássica vive no lado esquerdo. O LLM vive no lado direito. O harness é a ponte que faz os dois trabalharem juntos de forma produtiva.</p>
+<p>Pela primeira vez na história, o salto de abstração não é determinístico→determinístico (Assembly→C→Java→Frameworks), mas <strong>determinístico→probabilístico</strong>. Isso muda fundamentalmente a natureza do trabalho.</p>
+<hr/>
+<h2 id="dados-que-sustentam-a-tese">Dados que Sustentam a Tese<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#dados-que-sustentam-a-tese" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>Fonte</th><th>Dado</th></tr></thead><tbody><tr><td>METR 2025</td><td>Devs seniores 19% mais lentos com IA (percebem 20% mais rápidos)</td></tr><tr><td>DORA 2025</td><td>90% usam IA; instabilidade de entrega continua subindo</td></tr><tr><td>DORA 2025</td><td>Times com arquitetura frouxamente acoplada + feedback loops = +20-30% produtividade</td></tr><tr><td>GitClear</td><td>Code churn quase dobrou no período de adoção de IA (211M linhas)</td></tr><tr><td>Stack Overflow 2025</td><td>66% frustrados com soluções “quase certas”; 45% gastam mais tempo debugando IA</td></tr><tr><td>Stanford/ADP 2025</td><td>Emprego de devs 22-25 anos caiu ~20% desde pico de 2022</td></tr><tr><td>Código Fonte TV 2025</td><td>95,5% dos devs brasileiros usam IA</td></tr><tr><td>Anthropic 2024</td><td>Margem bruta negativa de 94% (subsídio insustentável)</td></tr><tr><td>Zarathon 2026</td><td>Brownfield = ~95% da indústria; maioria não está “AI ready”</td></tr><tr><td>Zarathon 2026</td><td>Custo de modelos deve subir ~10x quando subsídios acabarem</td></tr><tr><td>Zarathon 2026</td><td>SLM fine-tunado de 200MB já entrega resultados comparáveis para tarefas específicas</td></tr></tbody></table></div>
+<hr/>
+<h2 id="o-checklist-do-engenheiro-consolidado">O Checklist do Engenheiro (Consolidado)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#o-checklist-do-engenheiro-consolidado" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Unificando as recomendações práticas de todas as 9 fontes:</p>
+<ol>
+<li><strong>Materialize fronteiras no código</strong> — bounded contexts, pastas por domínio</li>
+<li><strong>Instale sensores de arquitetura no CI</strong> — ArchUnit, dependency-cruiser, Danger</li>
+<li><strong>Documente a linguagem ubíqua</strong> — glossário no root do repo</li>
+<li><strong>Escreva teste ANTES do código</strong> — TDD como especificação, vertical slicing</li>
+<li><strong>Use mutation testing</strong> — detector de mentira para suítes frágeis</li>
+<li><strong>PRs pequenos (200-400 linhas)</strong> — um propósito por PR</li>
+<li><strong>IA review como sensor, humano como juiz</strong> — fluxo em sequência</li>
+<li><strong>Conventional commits</strong> — histórico legível para volume industrial</li>
+<li><strong>Rode tudo como teste (quebra build), não como lint (só avisa)</strong></li>
+<li><strong>Mantenha “horas de voo manual”</strong> — não delegue tudo ao agente</li>
+<li><strong>Instrumentalize tudo com log/trace</strong> — breadcrumbs para debug assistido (custo quase zero)</li>
+<li><strong>Sanity checks no CI</strong> — cheque de sanidade antes de ir pro ar</li>
+<li><strong>ADRs como base de conhecimento</strong> — cada decisão de design gera ADR consultável</li>
+<li><strong>Rotina de “caixa preta” semanal</strong> — extrair lições das sessões de agente e melhorar regras</li>
+<li><strong>Diversifique modelos</strong> — raciocínio em LLM caro, implementação em model open/barato</li>
+</ol>
+<hr/>
+<h2 id="contradições-e-tensões">Contradições e Tensões<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#contradições-e-tensões" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout warning" data-callout="warning">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Tensão: Velocidade vs Qualidade </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>O mercado pressiona adoção rápida de IA (CEOs, boards, investidores). Mas os dados mostram que adoção sem disciplina <strong>aumenta</strong> instabilidade. A pressão vem de cima; quem paga o preço é quem está na cabine.</p>
+</div>
+</blockquote>
+<blockquote class="callout warning" data-callout="warning">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Tensão: Spec-Driven vs TDD </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>SDD propõe spec em linguagem natural como fonte da verdade. TDD propõe teste como spec executável. Böckeler questiona se SDD elaborado não é Verschlimmbesserung. As abordagens podem ser complementares (spec para alto nível, teste para contrato determinístico).</p>
+</div>
+</blockquote>
+<blockquote class="callout warning" data-callout="warning">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Tensão: Sensores computacionais vs inferenciais </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Computacionais são confiáveis mas limitados a estrutura. Inferenciais capturam semântica mas são não-determinísticos. A solução não é um ou outro, mas camadas: computacional como base + inferencial como complemento.</p>
+</div>
+</blockquote>
+<hr/>
+<h2 id="lacunas-identificadas">Lacunas Identificadas<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#lacunas-identificadas" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout question" data-callout="question">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Behaviour Harness </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Como guiar e verificar se a aplicação se comporta corretamente do ponto de vista funcional? Böckeler chama de “o elefante na sala”. Nenhuma solução robusta ainda.</p>
+</div>
+</blockquote>
+<blockquote class="callout question" data-callout="question">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Formação de novos devs </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Se a IA elimina as tarefas simples que formavam juniors, quem será senior daqui a 5 anos? O caminho tradicional de formação está sendo corroído. Zarathon propõe: problem based learning + pair sênior-júnior + horas de voo manual. O loop de repertório será mais rápido, mas a base ainda precisa de tempo (<a href="../wiki/concepts/formacao-novos-engenheiros" class="internal" data-slug="wiki/concepts/formacao-novos-engenheiros">formacao-novos-engenheiros</a>).</p>
+</div>
+</blockquote>
+<blockquote class="callout question" data-callout="question">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Sustentabilidade econômica dos modelos </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>OpenAI e Anthropic operam com prejuízo bilionário. Quando o subsídio acabar, preços podem subir ~10x. Resposta proposta: migrar para multimodelo/SLM, com modelos open para implementação e LLMs caros apenas para raciocínio profundo (<a href="../wiki/concepts/multimodelo-slm" class="internal" data-slug="wiki/concepts/multimodelo-slm">multimodelo-slm</a>).</p>
+</div>
+</blockquote>
+<hr/>
+<h2 id="ver-também">Ver também<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ver-também" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="../wiki/concepts/tres-camadas-coding-ia" class="internal" data-slug="wiki/concepts/tres-camadas-coding-ia">tres-camadas-coding-ia</a> — o framework organizador</li>
+<li><a href="../wiki/concepts/harness-engineering" class="internal" data-slug="wiki/concepts/harness-engineering">harness-engineering</a> — o modelo mental de controle</li>
+<li><a href="../wiki/concepts/sensores-computacionais" class="internal" data-slug="wiki/concepts/sensores-computacionais">sensores-computacionais</a> — a camada determinística</li>
+<li><a href="../wiki/concepts/tdd-como-especificacao" class="internal" data-slug="wiki/concepts/tdd-como-especificacao">tdd-como-especificacao</a> — teste como contrato</li>
+<li><a href="../wiki/concepts/code-review-como-portao" class="internal" data-slug="wiki/concepts/code-review-como-portao">code-review-como-portao</a> — o portão humano</li>
+<li><a href="../wiki/concepts/automation-complacency" class="internal" data-slug="wiki/concepts/automation-complacency">automation-complacency</a> — o risco psicológico</li>
+<li><a href="../wiki/concepts/spec-driven-development" class="internal" data-slug="wiki/concepts/spec-driven-development">spec-driven-development</a> — spec como guia (com limites)</li>
+<li><a href="../wiki/concepts/sanity-checks" class="internal" data-slug="wiki/concepts/sanity-checks">sanity-checks</a> — cheque de sanidade antes de produção</li>
+<li><a href="../wiki/concepts/multimodelo-slm" class="internal" data-slug="wiki/concepts/multimodelo-slm">multimodelo-slm</a> — futuro multimodelo e SLMs</li>
+<li><a href="../wiki/concepts/formacao-novos-engenheiros" class="internal" data-slug="wiki/concepts/formacao-novos-engenheiros">formacao-novos-engenheiros</a> — formação na era IA</li>
+</ul></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Visão de gráfico</h3><div class="graph-outer"><div id="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false}"></div><button id="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div id="global-graph-outer"><div id="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" id="toc" class aria-controls="toc-content" aria-expanded="true"><h3>Sumário</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="toc-content" class><ul class="overflow"><li class="depth-0"><a href="#engenharia-de-software-na-era-dos-agentes-de-ia" data-for="engenharia-de-software-na-era-dos-agentes-de-ia">Engenharia de Software na Era dos Agentes de IA</a></li><li class="depth-1"><a href="#a-tese-central" data-for="a-tese-central">A Tese Central</a></li><li class="depth-1"><a href="#o-framework-3-camadas-de-controle" data-for="o-framework-3-camadas-de-controle">O Framework: 3 Camadas de Controle</a></li><li class="depth-1"><a href="#os-três-pilares-da-camada-3" data-for="os-três-pilares-da-camada-3">Os Três Pilares da Camada 3</a></li><li class="depth-2"><a href="#1-arquitetura--define-por-onde-o-agente-pode-ir" data-for="1-arquitetura--define-por-onde-o-agente-pode-ir">1. Arquitetura → define POR ONDE o agente pode ir</a></li><li class="depth-2"><a href="#2-testes--define-o-que-o-agente-deve-produzir" data-for="2-testes--define-o-que-o-agente-deve-produzir">2. Testes → define O QUE o agente deve produzir</a></li><li class="depth-2"><a href="#3-code-review--define-se-pode-passar" data-for="3-code-review--define-se-pode-passar">3. Code Review → define SE pode passar</a></li><li class="depth-1"><a href="#o-modelo-de-harness-engineering" data-for="o-modelo-de-harness-engineering">O Modelo de Harness Engineering</a></li><li class="depth-2"><a href="#taxonomia" data-for="taxonomia">Taxonomia</a></li><li class="depth-2"><a href="#categorias-de-regulação" data-for="categorias-de-regulação">Categorias de regulação</a></li><li class="depth-2"><a href="#o-steering-loop" data-for="o-steering-loop">O Steering Loop</a></li><li class="depth-1"><a href="#sensores-na-prática" data-for="sensores-na-prática">Sensores na Prática</a></li><li class="depth-2"><a href="#aprendizados-chave" data-for="aprendizados-chave">Aprendizados-chave</a></li><li class="depth-1"><a href="#a-analogia-com-a-aviação" data-for="a-analogia-com-a-aviação">A Analogia com a Aviação</a></li><li class="depth-1"><a href="#multimodelo-e-sustentabilidade-econômica" data-for="multimodelo-e-sustentabilidade-econômica">Multimodelo e Sustentabilidade Econômica</a></li><li class="depth-1"><a href="#formação-de-novos-engenheiros" data-for="formação-de-novos-engenheiros">Formação de Novos Engenheiros</a></li><li class="depth-1"><a href="#sanity-checks-e-qualidade-intencional" data-for="sanity-checks-e-qualidade-intencional">Sanity Checks e Qualidade Intencional</a></li><li class="depth-1"><a href="#spec-driven-development-promessa-e-limites" data-for="spec-driven-development-promessa-e-limites">Spec-Driven Development: Promessa e Limites</a></li><li class="depth-2"><a href="#valor-real" data-for="valor-real">Valor real</a></li><li class="depth-2"><a href="#limites-böckeler" data-for="limites-böckeler">Limites (Böckeler)</a></li><li class="depth-2"><a href="#relação-com-tdd" data-for="relação-com-tdd">Relação com TDD</a></li><li class="depth-1"><a href="#o-gradiente-determinístico--probabilístico" data-for="o-gradiente-determinístico--probabilístico">O Gradiente Determinístico → Probabilístico</a></li><li class="depth-1"><a href="#dados-que-sustentam-a-tese" data-for="dados-que-sustentam-a-tese">Dados que Sustentam a Tese</a></li><li class="depth-1"><a href="#o-checklist-do-engenheiro-consolidado" data-for="o-checklist-do-engenheiro-consolidado">O Checklist do Engenheiro (Consolidado)</a></li><li class="depth-1"><a href="#contradições-e-tensões" data-for="contradições-e-tensões">Contradições e Tensões</a></li><li class="depth-1"><a href="#lacunas-identificadas" data-for="lacunas-identificadas">Lacunas Identificadas</a></li><li class="depth-1"><a href="#ver-também" data-for="ver-também">Ver também</a></li></ul></div></div><div class="backlinks"><h3>Backlinks</h3><ul class="overflow"><li><a href="../" class="internal">Letramento de IA — Wiki</a></li></ul></div></div><footer class><p>Salomão da Silva Santos © 2026</p><ul><li><a href="https://github.com/salomao-santos">Salomão da Silva Santos</a></li><li><a href="https://github.com/salomao-santos/letramento-de-ia">GitHub</a></li></ul></footer></div></div></body><script type="application/javascript">function c(){let t=this.parentElement;t.classList.toggle("is-collapsed");let l=t.classList.contains("is-collapsed")?this.scrollHeight:t.scrollHeight;t.style.maxHeight=l+"px";let o=t,e=t.parentElement;for(;e;){if(!e.classList.contains("callout"))return;let n=e.classList.contains("is-collapsed")?e.scrollHeight:e.scrollHeight+o.scrollHeight;e.style.maxHeight=n+"px",o=e,e=e.parentElement}}function i(){let t=document.getElementsByClassName("callout is-collapsible");for(let s of t){let l=s.firstElementChild;if(l){l.addEventListener("click",c),window.addCleanup(()=>l.removeEventListener("click",c));let e=s.classList.contains("is-collapsed")?l.scrollHeight:s.scrollHeight;s.style.maxHeight=e+"px"}}}document.addEventListener("nav",i);window.addEventListener("resize",i);
+</script><script type="module">
+          let mermaidImport = undefined
+          document.addEventListener('nav', async () => {
+            if (document.querySelector("code.mermaid")) {
+              mermaidImport ||= await import('https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.7.0/mermaid.esm.min.mjs')
+              const mermaid = mermaidImport.default
+              const darkMode = document.documentElement.getAttribute('saved-theme') === 'dark'
+              mermaid.initialize({
+                startOnLoad: false,
+                securityLevel: 'loose',
+                theme: darkMode ? 'dark' : 'default'
+              })
+
+              await mermaid.run({
+                querySelector: '.mermaid'
+              })
+            }
+          });
+          </script><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/copy-tex.min.js" type="application/javascript"></script><script type="application/javascript">
+        const socket = new WebSocket('ws://localhost:3001')
+        // reload(true) ensures resources like images and scripts are fetched again in firefox
+        socket.addEventListener('message', () => document.location.reload(true))
+      </script><script src="../postscript.js" type="module"></script></html>

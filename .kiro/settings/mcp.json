@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "youtube-transcript": {
+      "command": "npx",
+      "args": ["-y", "@sinco-lab/mcp-youtube-transcript"],
+      "env": {},
+      "disabled": false,
+      "autoApprove": ["get_transcripts","get_transcript", "get_video_info", "get_timed_transcript"]
+    }
+  }
+}

@@ -1,0 +1,231 @@
+{
+  "main": {
+    "id": "71b8cae3346273ee",
+    "type": "split",
+    "children": [
+      {
+        "id": "07e458a0e29af473",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a22a5837ce9419c4",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Visualização em gráfico"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "bfa9ad6560c964fe",
+    "type": "split",
+    "children": [
+      {
+        "id": "9442fc147e71245c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1e379cc060b2dece",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de arquivos"
+            }
+          },
+          {
+            "id": "ee649a5561399fd4",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Procurar"
+            }
+          },
+          {
+            "id": "48a58b54253f2de9",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Marcadores"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 434.5
+  },
+  "right": {
+    "id": "701374b55489738e",
+    "type": "split",
+    "children": [
+      {
+        "id": "ca44bad1b1ecb690",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c9fc8f68e37feec0",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "raw/clippings/Se teu code review é LGTM automático, o gargalo é tu, não o agente.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Links inversos para Se teu code review é LGTM automático, o gargalo é tu, não o agente"
+            }
+          },
+          {
+            "id": "743a8a474600c8c3",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "raw/clippings/Se teu code review é LGTM automático, o gargalo é tu, não o agente.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Links de saída para Se teu code review é LGTM automático, o gargalo é tu, não o agente"
+            }
+          },
+          {
+            "id": "27e588eadfa6d2cc",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Etiquetas"
+            }
+          },
+          {
+            "id": "026b8ac45dbdaf9f",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Todas as propriedades"
+            }
+          },
+          {
+            "id": "9aed4255ead5922f",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "raw/clippings/Se teu code review é LGTM automático, o gargalo é tu, não o agente.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Sumário de Se teu code review é LGTM automático, o gargalo é tu, não o agente"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir a troca rápida": false,
+      "graph:Abrir visualização em gráfico": false,
+      "canvas:Criar novo canvas": false,
+      "daily-notes:Abrir a nota de hoje": false,
+      "templates:Inserir modelo": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "bases:Criar nova base": false
+    }
+  },
+  "active": "a22a5837ce9419c4",
+  "lastOpenFiles": [
+    "blog/node_modules/mathjax-full/components/src/output/svg/fonts/tex/lib/output/common/fonts/tex/tex-variant.js",
+    "blog/node_modules/mathjax-full/components/src/output/svg/fonts/tex/lib/output/common/fonts/tex/tex-size4.js",
+    "blog/node_modules/mathjax-full/components/src/output/svg/fonts/tex/lib/output/common/fonts/tex/tex-size3.js",
+    "blog/node_modules/mathjax-full/components/src/output/svg/fonts/tex/lib/output/common/fonts/tex/tex-oldstyle.js",
+    "blog/node_modules/mathjax-full/components/src/output/svg/fonts/tex/lib/output/common/fonts/tex/tex-oldstyle-bold.js",
+    "blog/node_modules/mathjax-full/components/src/output/svg/fonts/tex/lib/output/common/fonts/tex/tex-mathit.js",
+    "blog/node_modules/mathjax-full/components/src/output/svg/fonts/tex/lib/output/common/fonts/tex/tex-calligraphic.js",
+    "blog/node_modules/mathjax-full/components/src/output/svg/fonts/tex/lib/output/common/fonts/tex/tex-calligraphic-bold.js",
+    "blog/node_modules/mathjax-full/components/src/output/svg/fonts/tex/lib/output/common/fonts/tex/smallop.js",
+    "blog/node_modules/mathjax-full/components/src/output/svg/fonts/tex/lib/output/common/fonts/tex/script.js",
+    "blog/node_modules/mathjax-full/components/src/output/svg/fonts/tex/lib/output/common/fonts/tex/script-bold.js",
+    "blog/node_modules/unist-util-visit-children/node_modules/@types/unist/README.md",
+    "blog/node_modules/vfile-location/node_modules/@types/unist/README.md",
+    "blog/node_modules/vfile/node_modules/@types/unist/README.md",
+    "blog/node_modules/unist-util-visit/node_modules/@types/unist/README.md",
+    "blog/node_modules/unified/node_modules/@types/unist/README.md",
+    "blog/node_modules/unist-util-position/node_modules/@types/unist/README.md",
+    "blog/node_modules/unist-util-modify-children/node_modules/@types/unist/README.md",
+    "blog/node_modules/unist-util-remove-position/node_modules/@types/unist/README.md",
+    "blog/node_modules/unist-util-find-after/node_modules/@types/unist/README.md",
+    "blog/node_modules/tsx/node_modules/@esbuild/darwin-arm64/README.md",
+    "blog/node_modules/rehype-katex/node_modules/@types/unist/README.md",
+    "blog/node_modules/rehype-mathjax/node_modules/@types/unist/README.md",
+    "blog/node_modules/parse-latin/node_modules/@types/unist/README.md",
+    "blog/node_modules/mdast-util-to-markdown/node_modules/@types/unist/README.md",
+    "blog/node_modules/mdast-util-phrasing/node_modules/@types/unist/README.md",
+    "blog/node_modules/mdast-util-mdx-jsx/node_modules/@types/unist/README.md",
+    "blog/node_modules/mdast-util-from-markdown/node_modules/@types/unist/README.md",
+    "blog/node_modules/mdast-util-find-and-replace/node_modules/@types/unist/README.md",
+    "blog/node_modules/hast-util-to-text/node_modules/@types/unist/README.md",
+    "blog/node_modules/hast-util-to-jsx-runtime/node_modules/@types/unist/README.md",
+    "blog/node_modules/hast-util-to-html/node_modules/@types/unist/README.md",
+    "blog/node_modules/hast-util-from-parse5/node_modules/@types/unist/README.md",
+    "blog/node_modules/hast-util-raw/node_modules/@types/unist/README.md",
+    "blog/node_modules/hast-util-from-html/node_modules/@types/unist/README.md",
+    "blog/node_modules/@clack/prompts/node_modules/is-unicode-supported/readme.md",
+    "blog/node_modules/cli-spinner/img/spinner.gif",
+    "blog/quartz/static/og-image.png",
+    "blog/quartz/static/icon.png",
+    "blog/public/static/og-image.png",
+    "blog/public/static/icon.png",
+    "blog/node_modules/psl/browserstack-logo.svg",
+    "source/public/static/og-image.png",
+    "source/public/static/icon.png",
+    "source/node_modules/cli-spinner/img/spinner.gif",
+    "source/node_modules/psl/browserstack-logo.svg"
+  ]
+}

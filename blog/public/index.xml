@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+      <title>📚 Letramento de IA</title>
+      <link>https://salomao-santos.github.io/letramento-de-ia</link>
+      <description>Últimas 10 notas on 📚 Letramento de IA</description>
+      <generator>Quartz -- quartz.jzhao.xyz</generator>
+      <item>
+    <title>Letramento de IA — Wiki</title>
+    <link>https://salomao-santos.github.io/letramento-de-ia/</link>
+    <guid>https://salomao-santos.github.io/letramento-de-ia/</guid>
+    <description>Letramento de IA Wiki pessoal sobre engenharia de software na era dos agentes de IA. Conhecimento compilado incrementalmente a partir de artigos, vídeos, podcasts e papers.</description>
+    <pubDate>Tue, 09 Jun 2026 18:40:53 GMT</pubDate>
+  </item><item>
+    <title>Ambient Affordances</title>
+    <link>https://salomao-santos.github.io/letramento-de-ia/concepts/ambient-affordances</link>
+    <guid>https://salomao-santos.github.io/letramento-de-ia/concepts/ambient-affordances</guid>
+    <description>Ambient Affordances Definição Termo de Ned Letcher (Thoughtworks). São as propriedades estruturais do ambiente de código que o tornam legível, navegável e tratável por agentes de IA.</description>
+    <pubDate>Tue, 09 Jun 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>Automation Complacency</title>
+    <link>https://salomao-santos.github.io/letramento-de-ia/concepts/automation-complacency</link>
+    <guid>https://salomao-santos.github.io/letramento-de-ia/concepts/automation-complacency</guid>
+    <description>Automation Complacency (Complacência por Automação) Definição Fenômeno estudado na aviação há décadas. Ocorre quando o operador confia tanto no sistema automatizado que para de questionar, verificar e pensar criticamente.</description>
+    <pubDate>Tue, 09 Jun 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>Code Review como Portão</title>
+    <link>https://salomao-santos.github.io/letramento-de-ia/concepts/code-review-como-portao</link>
+    <guid>https://salomao-santos.github.io/letramento-de-ia/concepts/code-review-como-portao</guid>
+    <description>Code Review como Portão Papel na série Terceiro pilar da camada 3, completando a tríade: Arquitetura → por onde o agente pode ir Teste → o que o agente deve produzir Code Review → se pode ...</description>
+    <pubDate>Tue, 09 Jun 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>Compaction de Contexto</title>
+    <link>https://salomao-santos.github.io/letramento-de-ia/concepts/compaction-de-contexto</link>
+    <guid>https://salomao-santos.github.io/letramento-de-ia/concepts/compaction-de-contexto</guid>
+    <description>Compaction de Contexto Definição Mecanismo pelo qual agentes de coding resumem o histórico de conversa quando a janela de contexto se aproxima do limite ...</description>
+    <pubDate>Tue, 09 Jun 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>Custo de Abstrações na Era da IA</title>
+    <link>https://salomao-santos.github.io/letramento-de-ia/concepts/custo-abstracoes-era-ia</link>
+    <guid>https://salomao-santos.github.io/letramento-de-ia/concepts/custo-abstracoes-era-ia</guid>
+    <description>Custo de Abstrações na Era da IA Definição Na era dos agentes de coding, cada abstração arquitetural tem um custo mensurável em tokens, acurácia e velocidade de entrega ...</description>
+    <pubDate>Tue, 09 Jun 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>Formação de Novos Engenheiros na Era IA</title>
+    <link>https://salomao-santos.github.io/letramento-de-ia/concepts/formacao-novos-engenheiros</link>
+    <guid>https://salomao-santos.github.io/letramento-de-ia/concepts/formacao-novos-engenheiros</guid>
+    <description>Formação de Novos Engenheiros na Era IA O Problema A IA elimina as tarefas simples que tradicionalmente formavam juniors. O caminho clássico (pegar tarefas básicas → aprender com seniors → ganhar experiência) está sendo corroído.</description>
+    <pubDate>Tue, 09 Jun 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>Harness Engineering</title>
+    <link>https://salomao-santos.github.io/letramento-de-ia/concepts/harness-engineering</link>
+    <guid>https://salomao-santos.github.io/letramento-de-ia/concepts/harness-engineering</guid>
+    <description>Harness Engineering Definição “Harness” vem de arreio de cavalo (rédea, sela, freio, bridão). O modelo é o cavalo — potente, rápido, mas sem rumo. O harness é tudo que canaliza essa potência numa direção útil.</description>
+    <pubDate>Tue, 09 Jun 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>LLM Wiki (Padrão Karpathy)</title>
+    <link>https://salomao-santos.github.io/letramento-de-ia/concepts/llm-wiki-karpathy</link>
+    <guid>https://salomao-santos.github.io/letramento-de-ia/concepts/llm-wiki-karpathy</guid>
+    <description>LLM Wiki (Padrão Karpathy) Definição Arquitetura de gestão de conhecimento proposta por Andrej Karpathy (abril 2026) onde um LLM compila conhecimento incrementalmente em páginas ...</description>
+    <pubDate>Tue, 09 Jun 2026 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>Memória de Longo Prazo para Agentes</title>
+    <link>https://salomao-santos.github.io/letramento-de-ia/concepts/memoria-longo-prazo-agentes</link>
+    <guid>https://salomao-santos.github.io/letramento-de-ia/concepts/memoria-longo-prazo-agentes</guid>
+    <description>Memória de Longo Prazo para Agentes Definição Mecanismos que permitem a agentes de coding reter conhecimento além de uma única sessão ou ciclo de compaction ...</description>
+    <pubDate>Tue, 09 Jun 2026 00:00:00 GMT</pubDate>
+  </item>
+    </channel>
+  </rss>
