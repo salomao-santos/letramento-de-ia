@@ -4,7 +4,7 @@ type: concept
 tags: [memoria, agentes, persistencia, mcp, consolidacao]
 created: 2026-06-09
 updated: 2026-06-09
-sources: ["[[wiki/sources/memoria-agentes-karpathy-agentmemory]]"]
+sources: ["[[wiki/sources/memoria-agentes-karpathy-agentmemory]]", "[[wiki/sources/spec-driven-limite-harness-proximo-passo]]"]
 ---
 
 # Memória de Longo Prazo para Agentes
@@ -16,6 +16,8 @@ Mecanismos que permitem a agentes de coding reter conhecimento além de uma úni
 ## O problema
 
 Compaction resolve o problema imediato (espaço no contexto) mas cria um problema sutil: **informação do início da sessão é eliminada primeiro**. Se você explorou uma arquitetura por 30 minutos, decidiu trade-offs e descartou abordagens, no turno 50 essa exploração pode ter virado uma linha de bullet point. Perguntas como "por que decidimos não usar Redis aqui?" ficam sem resposta.
+
+[[wiki/sources/spec-driven-limite-harness-proximo-passo]] categoriza isso como falha #3 de agentes: "amnésia entre sessões". Cada nova sessão começa do zero — como equipe de turnos sem passagem de bastão. O agente gasta metade dos tokens tentando entender o que aconteceu. A spec diz o que fazer, mas não o que foi feito, o que deu errado e qual o estado atual. Solução: progress files + disciplina de git + scripts de bootstrap que reconstruam contexto.
 
 ## Modelo de 4 Camadas (progressivo)
 

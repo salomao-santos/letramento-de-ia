@@ -4,7 +4,7 @@ type: concept
 tags: [memoria, contexto, agentes, llm, compaction]
 created: 2026-06-09
 updated: 2026-06-09
-sources: ["[[wiki/sources/memoria-agentes-karpathy-agentmemory]]", "[[wiki/sources/full-walkthrough-workflow-ai-coding]]"]
+sources: ["[[wiki/sources/memoria-agentes-karpathy-agentmemory]]", "[[wiki/sources/full-walkthrough-workflow-ai-coding]]", "[[wiki/sources/spec-driven-guia-completo-waldemar]]"]
 ---
 
 # Compaction de Contexto
@@ -49,6 +49,15 @@ LLMs não têm memória persistente. Tudo que o modelo "lembra" são tokens na j
 > "Devs love compacting for some reason, but I hate it. I much prefer my AI to behave like the guy from Memento because this state is always the same."
 
 Implicação: o workflow deve ser desenhado para sessões curtas e independentes (vertical slices, tickets pequenos) em vez de sessões longas que dependem de compaction para sobreviver.
+
+## RPI como implementação prática (Waldemar Neto)
+
+[[wiki/sources/spec-driven-guia-completo-waldemar]] demonstra o princípio Clear > Compact operacionalizado no workflow **RPI (Research → Plan → Implement)**:
+
+- **Research** em uma janela → salvar resultados em Markdown → **descartar janela**
+- **Implement** em janela nova e limpa, referenciando apenas os markdowns
+
+Caso real: 90 arquivos modificados com janela de implementação em apenas 50K tokens. Recomendação explícita: ficar dentro de 200K tokens (mesmo com janelas de 1M disponíveis).
 
 ## Implementações por agente
 

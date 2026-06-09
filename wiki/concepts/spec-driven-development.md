@@ -4,7 +4,7 @@ type: concept
 tags: [spec-driven-development, workflows, especificação]
 created: 2026-06-08
 updated: 2026-06-09
-sources: ["[[wiki/sources/spec-driven-development]]", "[[wiki/sources/software-fundamentals-matter-more-than-ever]]", "[[wiki/sources/full-walkthrough-workflow-ai-coding]]"]
+sources: ["[[wiki/sources/spec-driven-development]]", "[[wiki/sources/software-fundamentals-matter-more-than-ever]]", "[[wiki/sources/full-walkthrough-workflow-ai-coding]]", "[[wiki/sources/spec-driven-limite-harness-proximo-passo]]", "[[wiki/sources/spec-driven-guia-completo-waldemar]]"]
 ---
 
 # Spec-Driven Development (SDD)
@@ -59,6 +59,48 @@ No workshop prático, Matt reforça: "This is not specs to code. This is not whe
 
 O princípio de **spec-first** (pensar e estruturar antes de pedir ao agente) é valioso. As ferramentas e workflows elaborados ainda estão em maturação.
 
+## Operacionalização prática (Waldemar Neto — Guia Completo)
+
+[[wiki/sources/spec-driven-guia-completo-waldemar]] demonstra o workflow completo usando a skill **TLC Spec Driven**:
+
+### RPI — Research, Plan, Implement
+
+1. **Research:** janela dedicada para explorar codebase, MCPs, docs — descobrir o que precisa fazer
+2. **Plan:** salvar em Markdown (spec + design + tasks) — preserva conhecimento sem tokens futuros
+3. **Implement:** janela NOVA e limpa, executando tasks com referência apenas aos markdowns
+
+### Subagents para escala
+
+- Na fase de implement, o agente principal delega tasks paralelas a subagents
+- Caso real: 90 arquivos modificados, 4 subagents simultâneos, janela principal em 50K tokens
+- Cada subagent tem contexto próprio — menos chance de erro
+
+### Estado como continuidade
+
+Arquivo state que guarda decisões tomadas durante implementação. Permite:
+- Retomar em nova sessão ("continua o projeto X")
+- Separar entrega em múltiplos PRs
+- Rastreabilidade de decisões do agente
+
+### Regra de ouro
+
+> Manter janela de contexto ≤ 200K tokens. Quanto maior, mais alucinação. Separar research de implement em janelas diferentes.
+
+## Limitações explícitas (Waldemar Neto)
+
+[[wiki/sources/spec-driven-limite-harness-proximo-passo]] categoriza 6 falhas de agentes e mostra que spec driven resolve apenas 2 completamente:
+
+| Falha | Spec resolve? |
+|-------|--------------|
+| One Shot Hero (tudo de uma vez) | ✅ Quebra em tasks |
+| Vitória prematura ("terminei") | ✅ Define "done" explícito |
+| Amnésia entre sessões | ❌ Não guarda estado |
+| Validação superficial (curl 200 = pronto) | ❌ Nem todo framework enforça testes |
+| Self-judge (mesmo agente julga) | ❌ Spec é single-process |
+| Slope acumulado (5% pior a cada task) | ❌ Não enforça qualidade contínua |
+
+Conclusão: spec-driven é **feed forward puro** — diz o que fazer, mas não verifica se foi feito certo. Para sistemas inteiros, precisa de harness completo (feedback + memória + multi-agente).
+
 ## Relação com outros conceitos
 
 - Specs são uma forma de **guide (feedforward)** no modelo de [[wiki/concepts/harness-engineering]]
@@ -68,5 +110,8 @@ O princípio de **spec-first** (pensar e estruturar antes de pedir ao agente) é
 
 - [[wiki/sources/spec-driven-development]]
 - [[wiki/sources/software-fundamentals-matter-more-than-ever]]
+- [[wiki/sources/spec-driven-limite-harness-proximo-passo]]
+- [[wiki/sources/spec-driven-guia-completo-waldemar]]
 - [[wiki/concepts/harness-engineering]]
 - [[wiki/concepts/tdd-como-especificacao]]
+- [[wiki/concepts/compaction-de-contexto]]

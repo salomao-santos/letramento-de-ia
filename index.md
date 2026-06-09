@@ -25,6 +25,7 @@ updated: 2026-06-09
 - [[wiki/entities/andrej-karpathy]] — Pesquisador de IA, criador do padrão LLM Wiki
 - [[wiki/entities/agentmemory]] — Servidor MCP open-source para memória persistente de agentes
 - [[wiki/entities/matt-pocock]] — Educador TypeScript, defensor de fundamentos na era IA (skills, deep modules)
+- [[wiki/entities/waldemar-neto]] — Fundador do Tech Leads Clube, autor de conteúdo sobre Spec-Driven e Harness Engineering
 
 ## Conceitos
 
@@ -62,6 +63,8 @@ updated: 2026-06-09
 - [[wiki/sources/harness-beyond-skills-sensors]] — [2026-06-08] Deep dive em sensores: experimento com/sem, sensor sidecar, harness templates (Böckeler & Ford)
 - [[wiki/sources/boardroom-mercado-tecnologia-mudou]] — [2026-06-26] Mercado mudou: checkpoints, DDD+Design+SystemThinking, Build to Learn vs Earn (Santos & Viana)
 - [[wiki/sources/full-walkthrough-workflow-ai-coding]] — [2025-06-09] Workshop prático: workflow completo para AI coding com grill, Kanban, TDD e paralelização (Matt Pocock)
+- [[wiki/sources/spec-driven-limite-harness-proximo-passo]] — [2025-06-09] Spec Driven como subset de Harness: 6 falhas, feed forward vs feedback, orquestração multi-agente (Waldemar Neto)
+- [[wiki/sources/spec-driven-guia-completo-waldemar]] — [2025-05-01] Guia prático de SDD: workflow RPI, subagents, otimização de contexto (Waldemar Neto)
 
 ## Sínteses
 

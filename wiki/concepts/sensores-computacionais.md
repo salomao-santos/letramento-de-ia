@@ -4,7 +4,7 @@ type: concept
 tags: [determinismo, ci-cd, linter, testes, arquitetura]
 created: 2026-06-08
 updated: 2026-06-09
-sources: ["[[wiki/sources/as-3-camadas-do-coding-com-ia]]", "[[wiki/sources/arquitetura-na-era-dos-agentes]]", "[[wiki/sources/tdd-na-era-dos-agentes]]", "[[wiki/sources/harness-beyond-skills-sensors]]"]
+sources: ["[[wiki/sources/as-3-camadas-do-coding-com-ia]]", "[[wiki/sources/arquitetura-na-era-dos-agentes]]", "[[wiki/sources/tdd-na-era-dos-agentes]]", "[[wiki/sources/harness-beyond-skills-sensors]]", "[[wiki/sources/spec-driven-limite-harness-proximo-passo]]"]
 ---
 
 # Sensores Computacionais
@@ -46,6 +46,8 @@ Fowler chama o feedback do sensor ao agente de "positive prompt injection" — i
 ## Regra de ouro
 
 > Rode como **teste** (quebra o build), não como **lint** (só avisa). Na era dos agentes, aviso não basta. Tem que travar.
+
+[[wiki/sources/spec-driven-limite-harness-proximo-passo]]: "O que força não é a instrução, o que força são os sensores. O agente não deve ser quem julga — quem julga tem que ser uma ferramenta que retorna 0 ou 1. Se tu deixar o agente julgar, ele vai olhar pro código e vai achar que tá bom o suficiente sem rodar o teste."
 
 ## Distribuição temporal (Böckeler)
 

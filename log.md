@@ -7,6 +7,18 @@ updated: 2026-06-09
 
 # Log de Operações
 
+## [2026-06-09] ingest | Spec-Driven Development: A Habilidade #1 para Devs de 2026 (Guia Completo) (Waldemar Neto)
+- Fonte: "Spec-Driven Development: A Habilidade #1 para Devs de 2026 (Guia Completo)" por Waldemar Neto (Tech Leads Clube), YouTube (2025-05-01), ~12min
+- Páginas criadas: wiki/sources/spec-driven-guia-completo-waldemar, wiki/entities/waldemar-neto
+- Páginas atualizadas: wiki/concepts/spec-driven-development (seção operacionalização prática com RPI e subagents), wiki/concepts/compaction-de-contexto (RPI como implementação de Clear > Compact), wiki/sources/spec-driven-limite-harness-proximo-passo (autor corrigido para Waldemar), wiki/entities/zarathon-viana (removidas fontes incorretamente atribuídas), index.md
+- Observações: Vídeo tutorial/operacional que complementa o outro vídeo crítico do mesmo autor. Correção de atribuição: ambos os vídeos do Tech Leads Clube (este e "Spec Driven chegou no limite") são do Waldemar Neto, não do Zarathon Viana. Contribuições novas: framework RPI (Research → Plan → Implement), caso real 90 arquivos/50K tokens, subagents para paralelização (4 simultâneos), conceito de "estado" como memória de decisões, skill TLC Spec Driven (Felipe Rodrigues).
+
+## [2026-06-09] ingest | Spec Driven chegou no limite — Harness Engineering é o próximo passo (Waldemar Neto)
+- Fonte: "Spec Driven chegou no limite — Harness Engineering é o próximo passo" por Waldemar Neto (Tech Leads Club), YouTube (2025-06-09), ~12min
+- Páginas criadas: wiki/sources/spec-driven-limite-harness-proximo-passo
+- Páginas atualizadas: wiki/concepts/harness-engineering (orquestração multi-agente, analogia GPS, contrato Build↔QA), wiki/concepts/spec-driven-development (tabela 6 falhas, limitações explícitas), wiki/concepts/sensores-computacionais (agente não deve julgar — 0/1), wiki/concepts/memoria-longo-prazo-agentes (amnésia como falha #3), wiki/entities/waldemar-neto (posições-chave, nova fonte), index.md
+- Observações: Vídeo que posiciona spec-driven explicitamente como subset de harness (cobre 2 de 6 falhas). Contribuições novas: tabela de 6 falhas com score, analogia GPS (feed forward = rota, feedback = recálculo), mecanismo de contrato para orquestração multi-agente (evita loop infinito), framework PBQ como implementação prática (51¢ para todo-list completa com QA loop), referência a código vazado do Claude Code mostrando instrumentação multi-agente. Reforça fortemente: sensores > instrução, agente como self-judge é anti-padrão, slope acumulado em sistemas grandes.
+
 ## [2026-06-09] ingest | Full Walkthrough: Workflow for AI Coding (Matt Pocock)
 - Fonte: "Full Walkthrough: Workflow for AI Coding" por Matt Pocock, workshop (2025-06-09), YouTube (~1h36min)
 - Páginas criadas: wiki/sources/full-walkthrough-workflow-ai-coding

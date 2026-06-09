@@ -4,7 +4,7 @@ type: concept
 tags: [harness-engineering, agentes-ia, ferramentas]
 created: 2026-06-08
 updated: 2026-06-09
-sources: ["[[wiki/sources/as-3-camadas-do-coding-com-ia]]", "[[wiki/sources/arquitetura-na-era-dos-agentes]]", "[[wiki/sources/engenharia-era-piloto-automatico]]", "[[wiki/sources/software-fundamentals-matter-more-than-ever]]", "[[wiki/sources/harness-beyond-skills-sensors]]"]
+sources: ["[[wiki/sources/as-3-camadas-do-coding-com-ia]]", "[[wiki/sources/arquitetura-na-era-dos-agentes]]", "[[wiki/sources/engenharia-era-piloto-automatico]]", "[[wiki/sources/software-fundamentals-matter-more-than-ever]]", "[[wiki/sources/harness-beyond-skills-sensors]]", "[[wiki/sources/spec-driven-limite-harness-proximo-passo]]"]
 ---
 
 # Harness Engineering
@@ -65,6 +65,25 @@ Ambos são feedforward puro: moldam o comportamento da IA antes da ação, exata
 - **Guides (feedforward):** instruções que canalizam o comportamento do agente antes da ação
 - **Sensors (feedback):** verificações que detectam problemas depois da ação ([[wiki/concepts/sensores-computacionais]])
 
+### Analogia GPS ([[wiki/sources/spec-driven-limite-harness-proximo-passo]])
+
+- **Feed forward** = a rota que o GPS traça antes de sair
+- **Feedback** = GPS recalculando quando você erra a saída
+
+Só rota → te perdes no primeiro erro. Só recálculo → sais sem direção. Precisa dos dois.
+
+## Orquestração Multi-Agente
+
+[[wiki/sources/spec-driven-limite-harness-proximo-passo]]: o caminho é ter agentes **em processos separados** com missões distintas — não sub-agents dentro do mesmo contexto:
+
+- **Agente Build:** implementa (fará de tudo para cumprir, inclusive deletar código)
+- **Agente QA:** valida contra um contrato concordado (rejeita o que não passa)
+- **Orquestrador:** inicia ciclos Build → QA → Build até convergir
+
+O mecanismo-chave é o **contrato**: lista concordada entre Build e QA antes da implementação. Sem contrato, QA sugere coisas não relacionadas e gera loop infinito.
+
+Dado: código vazado do Claude Code já mostra instrumentação para essa orquestração nativa.
+
 ## Investimento contínuo no Harness
 
 Insight do time OpenAI (Ryan LeCompte) e reforçado por Böckeler: equipes produtivas gastam a maior parte da energia **no harness**, não no código. Quase nunca tocam o código diretamente. Cada falha recorrente vira um novo sensor ou guide.
@@ -83,3 +102,4 @@ Paralelo com Kent Beck (via [[wiki/entities/matt-pocock]]): "Invest in the desig
 - [[wiki/sources/maintainability-sensors]] — aplicação prática dos sensores
 - [[wiki/sources/harness-beyond-skills-sensors]] — deep dive em sensores com experimento
 - [[wiki/sources/software-fundamentals-matter-more-than-ever]] — skills como guides práticos
+- [[wiki/sources/spec-driven-limite-harness-proximo-passo]] — spec-driven como subset, multi-agente, 6 falhas
