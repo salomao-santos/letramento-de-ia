@@ -80,7 +80,7 @@ Quando o usuário fizer uma pergunta:
 1. Consulte `index.md` para identificar páginas relevantes
 2. Leia as páginas identificadas
 3. Sintetize uma resposta com citações (`[[links]]` para páginas da wiki)
-4. Se a resposta for valiosa o suficiente para ser preservada, pergunte ao usuário se deseja salvá-la como página em `wiki/synthesis/`
+4. Se a resposta for valiosa o suficiente para ser preservada, pergunte ao usuário se deseja salvá-la como página em `wiki/essentials/`
 5. Se salva, registre no log
 
 ### 3. Lint (Manutenção)
@@ -120,7 +120,7 @@ Quando solicitado (ou periodicamente sugerido):
 - [[wiki/sources/nome]] — [YYYY-MM-DD] resumo de uma linha
 
 ## Sínteses
-- [[wiki/synthesis/nome]] — descrição curta
+- [[wiki/essentials/nome]] — descrição curta
 ```
 
 ## Formato do log.md

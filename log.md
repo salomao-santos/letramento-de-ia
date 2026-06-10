@@ -104,7 +104,7 @@ updated: 2026-06-09
 
 ## [2026-06-08] synthesis | Engenharia de Software na Era dos Agentes de IA
 - Tipo: Síntese/Overview
-- Páginas criadas: wiki/synthesis/overview-engenharia-na-era-ia
+- Páginas criadas: wiki/essentials/overview-engenharia-na-era-ia
 - Páginas atualizadas: index.md
 - Fontes sintetizadas: 8 (todas as fontes disponíveis na wiki)
 - Observações: Conecta a série do Zarathon Viana com o trabalho da Böckeler/Fowler. Identifica a tese central (IA como amplificador), o framework de 3 camadas, os 3 pilares, o gradiente determinístico→probabilístico, dados de suporte, contradições e lacunas.

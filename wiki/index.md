@@ -9,6 +9,7 @@ Wiki pessoal sobre **engenharia de software na era dos agentes de IA**. Conhecim
 ## Sínteses
 
 - [[synthesis/overview-engenharia-na-era-ia|Engenharia de Software na Era dos Agentes de IA]] — Visão geral conectando todas as fontes
+- [[essentials/archetype-enterprise-ia|O Essencial ao Construir um Archetype para Projetos Enterprise com IA]] — As 5 camadas de um service template governável (Java+Spring / Python)
 
 ## Conceitos
 
