@@ -193,12 +193,13 @@ Todo teste deve apontar para o requisito que satisfaz. No formato de spec (`requ
 - **Python:** marcador `@pytest.mark.req("REQ-014")` + docstring citando o critério.
 - **Gate:** check que falha se um teste novo não tem vínculo com requisito/ADR; conecta com a regra de ouro do TDD — o humano escreve o RED a partir do critério de aceite, não o agente.
 
-### 2. Commits pequenos e de propósito único (via hook/workflow)
+### 2. Branches pequenas e de propósito único (via hook/workflow)
 
-A eficácia da revisão desaba depois de 200-400 linhas (detecção ~87% em PRs < 100 linhas, ~28% acima de 1000). O archetype não deixa isso para a boa vontade do agente: automatiza o limite.
+A eficácia da revisão desaba depois de 200-400 linhas (detecção ~87% em PRs < 100 linhas, ~28% acima de 1000). O archetype não deixa isso para a boa vontade do agente: automatiza o limite — uma branch resolve **um único propósito** e vira um PR pequeno e revisável.
 
-- **Regra no `AGENTS.md`:** "um propósito por commit/PR; gere em fatias verticais pequenas; não acumule mudanças não relacionadas."
-- **Hook/Workflow:** hook `agentStop`/pre-commit que avisa (ou bloqueia) diffs acima de um teto de linhas/arquivos; workflow de CI que sinaliza PR grande demais para review confiável.
+- **Regra no `AGENTS.md`:** "uma branch por propósito; gere em fatias verticais pequenas; não acumule mudanças não relacionadas na mesma branch."
+- **Convenção de branch:** nome derivado do requisito/task (ex: `feat/REQ-014-listagem-pagamentos`), reforçando a rastreabilidade do item 1.
+- **Hook/Workflow:** hook `agentStop`/pre-push que avisa (ou bloqueia) branches com diff acima de um teto de linhas/arquivos; workflow de CI que sinaliza PR grande demais para review confiável.
 - **Conventional Commits** validados por hook `commit-msg` — histórico legível e changelog/rollback automáticos para volume industrial de mudanças.
 
 ### 3. Modelo de geração ≠ modelo de teste/review
@@ -224,8 +225,8 @@ A sequência segue o gradiente da wiki: determinístico forte primeiro, inferenc
 6. **Esqueleto de testes nas 3 camadas** — unitário, E2E (Testcontainers) e mutation (PIT/mutmut) rodando no CI, com um slice vertical de exemplo já em TDD.
 7. **Quality gate do SonarQube + gate de cobertura** — JaCoCo/`--cov-fail-under` + threshold de mutation score; Sonar bloqueando o PR.
 8. **Gate de segurança** — GitLeaks no pre-commit, Semgrep + SCA bloqueantes no CI, security review por IA periódico.
-9. **Regras de shift-left no `AGENTS.md`** — teste rastreável a requisito/ADR, commit pequeno de propósito único, modelo de geração ≠ modelo de teste/review.
-10. **Hooks de disciplina** — `commit-msg` (Conventional Commits) e `agentStop`/pre-commit que barra diffs grandes demais.
+9. **Regras de shift-left no `AGENTS.md`** — teste rastreável a requisito/ADR, branch pequena de propósito único, modelo de geração ≠ modelo de teste/review.
+10. **Hooks de disciplina** — `commit-msg` (Conventional Commits) e `agentStop`/pre-push que barra branches com diff grande demais.
 11. **Template de Spec** — estrutura de spec por feature + a regra de nunca delegar o RED.
 12. **CI em ambiente limpo** — todos os sensores e gates repetidos do zero.
 13. **`AGENTS.md` + skills** — `create-use-case`, `create-test`, e a skill de "novo agregado" que aplica as regras de dados.
@@ -237,6 +238,51 @@ A sequência segue o gradiente da wiki: determinístico forte primeiro, inferenc
 ## Síntese em uma frase
 
 > Um archetype AI-ready embute as cinco camadas — estrutura, especificação, guides, sensors e memória — para que o agente comece dentro do harness, não num campo aberto. Greenfield é a única chance de fazer isso de graça.
+
+---
+
+## Checklist: o archetype tem a estrutura ideal?
+
+Use para auditar um archetype existente ou validar um novo. Se um item não puder ser marcado, ali está a próxima cerca a construir.
+
+### Camada 1 — Estrutura
+- [ ] Pastas organizadas **por domínio** (vertical slice), não por tipo/camada
+- [ ] Módulos **deep** (interface simples escondendo complexidade)
+- [ ] Nomenclatura consistente e CI pré-configurado
+- [ ] Estrutura **flat por padrão** — sem ports/adapters/mappers antes da dor justificar
+
+### Camada 2 — Especificação
+- [ ] Existe entrada de **Design Doc / RFC / ADR** revisada por humano
+- [ ] Template de **Spec** por feature no repo
+- [ ] Esqueleto de testes com um **slice vertical de exemplo já em TDD**
+- [ ] Regra explícita: **nunca delegar o RED** ao agente
+
+### Camada 3 — Guides
+- [ ] `AGENTS.md` enxuto (~200 linhas) com estrutura + ponteiros (progressive disclosure)
+- [ ] **Glossário ubíquo** (DDD) no repo
+- [ ] **ADRs** versionados
+- [ ] Skills portáveis (`create-use-case`, `create-test`, "novo agregado")
+- [ ] **Config de MCPs** versionada (Atlassian/Azure + Context7)
+
+### Camada 4 — Sensors (quebram o build, não só avisam)
+- [ ] Type/compile + lint com **mensagens custom**
+- [ ] **Fitness de arquitetura** (ArchUnit / import-linter) bloqueando violação de camada
+- [ ] Testes unitários + **E2E** (Testcontainers)
+- [ ] **Mutation testing** (PIT / mutmut) com threshold mínimo
+- [ ] **Gate de cobertura** mínima quebrando o build
+- [ ] **Gate de segurança** (Semgrep + GitLeaks + SCA) bloqueante
+- [ ] **Quality gate do SonarQube** no CI
+
+### Camada 5 — Memória
+- [ ] ADRs + `.docs/` no root com decisões importantes
+- [ ] `HANDOFF.md` / state file para continuidade entre sessões
+
+### Shift-left e disciplina
+- [ ] Teste **rastreável** a requisito/ADR (tag/marcador)
+- [ ] Hook que barra **branches grandes** (pre-push/`agentStop`); Conventional Commits via `commit-msg`
+- [ ] Convenção de **branch por propósito** ligada ao requisito (ex: `feat/REQ-014-...`)
+- [ ] Config separando **modelo de geração ≠ modelo de teste/review**
+- [ ] **Steering loop** ativo: toda falha recorrente vira novo sensor/gate/guide
 
 ---
 
