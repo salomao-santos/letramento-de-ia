@@ -1,6 +1,6 @@
 # Letramento de IA
 
-Wiki pessoal sobre engenharia de software na era dos agentes de IA. O projeto reúne conhecimento acumulado a partir de artigos, vídeos, podcasts e papers sobre arquitetura, produtividade, testes, qualidade de software e uso responsável de IA em engenharia.
+Wiki profissional sobre engenharia de software na era dos agentes de IA. O projeto reúne conhecimento acumulado a partir de artigos, vídeos, podcasts e papers sobre arquitetura, produtividade, testes, qualidade de software e uso responsável de IA em engenharia.
 
 ## Objetivo
 
